@@ -6,8 +6,13 @@
     <title>Presto.it</title>
 </head>
 <body>
+
+    <x-navbar/>
+    
     <div class="min-vh-100">
         {{$slot}}
     </div>
+
+    <x-footer/>
 </body>
 </html>
