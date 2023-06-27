@@ -15,7 +15,7 @@ use App\Http\Controllers\AnnouncementController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
 
 Route::get('/create/announcement',[AnnouncementController::class,'createAnnouncement'])->name('announcements.create');
