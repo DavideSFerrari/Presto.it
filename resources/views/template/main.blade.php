@@ -9,7 +9,8 @@
 </head>
 
 <body>
-
+    
+    
     <x-navbar/>
     
     <div class="min-vh-100">
@@ -18,6 +19,6 @@
 
     <x-footer/>
 
-    @livewireScripts
+    @livewireScripts 
 </body>
 </html>
