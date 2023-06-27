@@ -1,18 +1,18 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-center">
-        <div class="row">
+<nav class="navbar navbar-expand-lg bg-body-tertiary ">
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
 
               <div class="">
                 <a class="navbar-brand" href="{{ route('homepage') }}"
                     class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Presto.it</a>
               </div>
 
-              <div class="j"> 
+              <div class=""> 
+
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -69,6 +69,5 @@
                 </ul>
               </div>
             </div>
-        </div>
     </div>
 </nav>
