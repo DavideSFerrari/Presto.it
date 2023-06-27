@@ -16,11 +16,14 @@
             <li><a class="dropdown-item" href="#">Categoria 2</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Categoria 3</a></li>
-          </ul>
+        </ul>
         </li>
+      
+        <ul>
         <li class="nav-item">
         <a class="nav-link" href="#" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Annunci</a>
         </li>
+        </ul>
         <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Cosa ti serve?" aria-label="Cosa ti serve?">
         <button class="btn btn-outline-success" type="submit">Cerca</button>
@@ -30,14 +33,17 @@
                         <form action="{{route('logout')}}" method="POST"> 
       @csrf
       <button oneclick="event.preventDefault(); this.closest('form').submit();">
+        <ul>
       <li class="nav-item">
       <a class="nav-link">
         Logout
         </a>
         </li>
+        </ul>
       </button>
     </form>
-    <p>Ciao, {{Auth::user()->email}},</p>
+    <ul>
+    <li class="nav-item"><a class="nav-link"> Ciao, {{Auth::user()->email}}</a></li>
                     @else
                       <li class="nav-item"><a class="nav-link" href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a></li>
 
