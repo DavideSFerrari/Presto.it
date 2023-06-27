@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,6 @@ use App\Http\Controllers\AnnouncementController;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', [PageController::class,'homepage'])->name('homepage')->middleware('auth');
 
 Route::get('/create/announcement',[AnnouncementController::class,'createAnnouncement'])->name('announcements.create');
