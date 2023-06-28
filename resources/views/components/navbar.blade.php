@@ -30,7 +30,7 @@
                         </ul>   
                           
                     <li class="nav-item">
-                        <a class="nav-link anim" href="#">Annunci</a>
+                        <a class="nav-link anim" href="{{route('show')}}">Annunci</a>
                     </li>
 
                 
