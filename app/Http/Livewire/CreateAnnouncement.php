@@ -37,6 +37,7 @@ class CreateAnnouncement extends Component
             'detail'=>$this->detail,
             'image'=>$this->image,
             ]);
+            session()->flash('message', 'Annuncio inserito con successo');
             $this->cleanForm();
     }
 

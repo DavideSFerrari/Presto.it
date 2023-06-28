@@ -1,5 +1,12 @@
 <div class="p-5 rounded-4 shadow">
    <h1> Inserisci annuncio </h1>
+   
+   @if (session()->has ('message'))
+    <div class="flex flex row hustify-center my-2 alert alert-success">
+        {{ session('message')}}
+    </div>
+   @endif
+   
    <form wire:submit.prevent="store">
     @csrf
     <div class="mb-3">
