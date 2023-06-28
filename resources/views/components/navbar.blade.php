@@ -7,7 +7,7 @@
             <div class="collapse navbar-collapse justify-content-evenly" id="navbarSupportedContent">
 
                 <div class="">
-                    <a class="navbar-brand" href="{{ route('homepage') }}"
+                    <a class="navbar-brand anim" href="{{ route('homepage') }}"
                         class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Presto.it</a>
                     </div>
 
@@ -16,7 +16,7 @@
                 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle anim" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Categorie
                         </a>
@@ -33,7 +33,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Annunci</a>
+                        <a class="nav-link anim" href="#">Annunci</a>
                     </li>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Cosa ti serve?"
@@ -44,27 +44,28 @@
                     
                     @if (Route::has('login'))
                         @auth
+                        <a class="nav-link anim mx-2" href="#" class="my-2">Ciao, {{ Auth::user()->email }},</a>
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button oneclick="event.preventDefault(); this.closest('form').submit();">
+                                <button class="btn-1" onclick="event.preventDefault(); this.closest('form').submit();">
                                     <li class="nav-item">
-                                        <a class="nav-link">
+                                        <a class="nav-link anim ">
                                             Logout
                                         </a>
                                     </li>
                                 </button>
                             </form>
                             <li class="nav-item">
-                        <a class="nav-link" href="#" class="my-2">Ciao, {{ Auth::user()->email }},</a>
+                        
                     </li>
                         @else
-                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"
-                                    class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log
+                            <li class="nav-item"><a class="nav-link anim" href="{{ route('login') }}"
+                                    class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 ">Log
                                     in</a></li>
 
 
                             @if (Route::has('register'))
-                                <li class="nav-item"><a class="nav-link" href="{{ route('register') }}"
+                                <li class="nav-item"><a class="nav-link anim" href="{{ route('register') }}"
                                         class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
                                 </li>
                             @endif
