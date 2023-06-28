@@ -4,7 +4,7 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-evenly" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-between ps-1 pe-1" id="navbarSupportedContent">
 
                 <div class="">
                     <a class="navbar-brand anim" href="{{ route('homepage') }}"
@@ -21,25 +21,18 @@
                             Categorie
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Categoria 1</a></li>
+                            @foreach ($categories as $category)
+                            <li><a class="dropdown-item" href="#">{{$category->name}}</a></li>
                             <li>
                                 <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Categoria 2</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Categoria 3</a></li>
-                        </ul>
-                    </li>
+                            </li>  
+                            @endforeach
+                        </ul>   
+                          
                     <li class="nav-item">
                         <a class="nav-link anim" href="#">Annunci</a>
                     </li>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Cosa ti serve?"
-                            aria-label="Cosa ti serve?">
-                        <button class="btn btn-outline-success" type="submit">Cerca</button>
-                    </form>
+
                 
                     
                     @if (Route::has('login'))

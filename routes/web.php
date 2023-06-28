@@ -16,5 +16,6 @@ use App\Http\Controllers\PageController;
 */
 
 Route::get('/', [PageController::class,'homepage'])->name('homepage');
+Route::get('/show', [PageController::class,'show'])->name('homepage');
+
 Route::get('/create/announcement',[AnnouncementController::class,'createAnnouncement'])->name('announcements.create');
-Route::get('/details/announcement/{announcement}', [AnnouncementController::class,'detailsAnnouncement'])->name('announcements.details');

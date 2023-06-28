@@ -11,10 +11,4 @@ class AnnouncementController extends Controller
         return view('announcements.create');
     }
 
-    public function detailsAnnouncement(Announcement $announcement){
-        
-        return view('announcements.details', compact('announcement'));
-    }
-
-
 }
