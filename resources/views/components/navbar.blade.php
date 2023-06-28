@@ -4,7 +4,7 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-evenly" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-between ps-1 pe-1" id="navbarSupportedContent">
 
                 <div class="">
                     <a class="navbar-brand anim" href="{{ route('homepage') }}"
@@ -35,11 +35,7 @@
                     <li class="nav-item">
                         <a class="nav-link anim" href="#">Annunci</a>
                     </li>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Cosa ti serve?"
-                            aria-label="Cosa ti serve?">
-                        <button class="btn btn-outline-success" type="submit">Cerca</button>
-                    </form>
+
                 
                     
                     @if (Route::has('login'))
