@@ -2,7 +2,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8">
-            <form class="p-5 shadow" action="{{route('login')}}" method="POST">
+            <form class="p-5 shadow rounded-4" action="{{route('login')}}" method="POST">
               @method('POST')
               @csrf
     

@@ -1,4 +1,4 @@
-<div>
+<div class="p-5 rounded-4 shadow">
    <h1> Inserisci annuncio </h1>
    <form wire:submit.prevent="store">
     @csrf
