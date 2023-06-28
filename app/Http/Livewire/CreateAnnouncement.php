@@ -23,10 +23,18 @@ class CreateAnnouncement extends Component
             'price'=>$this->price,
             'detail'=>$this->detail,
             'image'=>$this->image,
-            
-        ]);
+            ]);
+            $this->cleanForm();
 
        
+    }
+
+    public function cleanForm(){
+        $this->title = '';
+        $this->description = '';
+        $this->price = '';
+        $this->detail = '';
+        $this->image = '';
     }
 
     public function render()
