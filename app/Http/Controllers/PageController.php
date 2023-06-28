@@ -10,14 +10,13 @@ class PageController extends Controller
     
 
     public function homepage() {
-        $announcements = Announcement::all();
+        $announcements = Announcement::take(6)->get()->sortByDesc('created_at');
         return view('homepage', compact('announcements'));
     }
 
-    public function show ($announcements){
+    public function show (Announcement $announcement){
         
-       Announcement::findOrFail($announcements);
-       return view('show', ['announcements' => $announcements]);
+        return view('homepage', compact('announcement'));;
         
     }
 }

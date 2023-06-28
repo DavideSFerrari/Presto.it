@@ -30,8 +30,8 @@ class AnnouncementRequest extends FormRequest
         ];
     }
 
-    public function messages(): array
-    {
+    public function messages(){
+        
         return [
             'title.required' => 'Il titolo deve essere obbligatorio',
             'title.string' => 'Il titolo deve essere di tipo stringa',

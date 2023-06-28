@@ -19,7 +19,7 @@ return new class extends Migration
             
         });
 
-$categories = ['Motori','Informatica','Elettrodomestici','Libri','Giochi','Sport','Immobili','Telefonia','Arredamento'];
+$categories = ['Motori','Informatica','Elettrodomestici','Libri','Giochi','Sport','Immobili','Telefonia','Arredamento','Divertimento'];
 
 foreach($categories as $category) {
     Category::create(['name' => $category]);

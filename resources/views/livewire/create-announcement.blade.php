@@ -25,7 +25,7 @@
     </div>
     <div class="mb-3">
         <label for="price"> Prezzo </label>
-        <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror">
+        <input wire:model="price" type="float" class="form-control @error('price') is-invalid @enderror">
         @error('price')
             {{$message}}
         @enderror
