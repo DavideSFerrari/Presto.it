@@ -1,18 +1,27 @@
-<div>
+<div class="p-5 rounded-4 shadow">
    <h1> Inserisci annuncio </h1>
    <form wire:submit.prevent="store">
     @csrf
     <div class="mb-3">
         <label for="title"> Titolo Annuncio</label>
-        <input wire:model="title" type="text" class="form-control">
+        <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
+        @error('title')
+            {{$message}}
+        @enderror    
     </div>
     <div class="mb-3">
         <label for="description"> Descrizione</label>
-        <textarea wire:model="description" type="text" class="form-control"></textarea>
+        <textarea wire:model="description" type="text" class="form-control @error('description') is-invalid @enderror"></textarea>
+        @error('description')
+            {{$message}}
+        @enderror
     </div>
     <div class="mb-3">
         <label for="price"> Prezzo </label>
-        <input wire:model="price" type="number" class="form-control">
+        <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror">
+        @error('price')
+            {{$message}}
+        @enderror
     </div>
     <div class="mb-3">
         <label for="detail"> Dettagli </label>

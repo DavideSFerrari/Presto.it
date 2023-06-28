@@ -55,7 +55,7 @@
                                 </button>
                             </form>
                             <li class="nav-item">
-                        <a class="nav-link" href="#">Ciao, {{ Auth::user()->email }},</a>
+                        <a class="nav-link" href="#" class="my-2">Ciao, {{ Auth::user()->email }},</a>
                     </li>
                         @else
                             <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"

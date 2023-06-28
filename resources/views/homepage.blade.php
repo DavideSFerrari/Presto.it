@@ -22,7 +22,11 @@
                 <x-navbar></x-navbar>
 
 
-
+                @if (Route::has('login'))
+                        @auth
+                        <a class="btn btn-primary" href="{{route('announcements.create')}}" role="button">Inserisci annuncio</a>
+                        @endauth
+                    @endif
 
 
                 <x-footer></x-footer>
