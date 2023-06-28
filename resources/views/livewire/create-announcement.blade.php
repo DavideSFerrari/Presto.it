@@ -36,7 +36,8 @@
     </div>
 
     <div>
-        <select>
+    <label for="category">Categoria</label>
+    <select class="form-control" id="category" name="category">
             @foreach ($categories as $category)
             <option value="{{$category->id}}">{{$category->name}} {{$category->surname}}</option>
             @endforeach
