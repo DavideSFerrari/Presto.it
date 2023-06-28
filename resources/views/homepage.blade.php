@@ -54,6 +54,23 @@
                     @endif
 
 
+<div class="container">
+    <div class="row">
+        @foreach ($announcements as $announcement)
+        <div class="card" style="width: 18rem;">
+            <img src="http://picsum.photos/200" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{$announcement->title}}</h5>
+            <p class="card-text">{{$announcement->price}} euro</p>
+            <p class="card-text">{{$announcement->description}}</p>
+            <p class="card-text">{{$announcement->detail}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        @endforeach
+    </div>
+    
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
         </x-main>   
