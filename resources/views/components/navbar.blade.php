@@ -4,15 +4,16 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-evenly" id="navbarSupportedContent">
 
-              <div class="">
-                <a class="navbar-brand" href="{{ route('homepage') }}"
-                    class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Presto.it</a>
-              </div>
+                <div class="">
+                    <a class="navbar-brand" href="{{ route('homepage') }}"
+                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Presto.it</a>
+                    </div>
 
-              <div class=""> 
-
+                <div class=""> 
+        
+                
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -32,14 +33,15 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"
-                            class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Annunci</a>
+                        <a class="nav-link" href="#">Annunci</a>
                     </li>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Cosa ti serve?"
                             aria-label="Cosa ti serve?">
                         <button class="btn btn-outline-success" type="submit">Cerca</button>
                     </form>
+                
+                    
                     @if (Route::has('login'))
                         @auth
                             <form action="{{ route('logout') }}" method="POST">
@@ -52,7 +54,9 @@
                                     </li>
                                 </button>
                             </form>
-                            <p>Ciao, {{ Auth::user()->email }},</p>
+                            <li class="nav-item">
+                        <a class="nav-link" href="#">Ciao, {{ Auth::user()->email }},</a>
+                    </li>
                         @else
                             <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"
                                     class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log
@@ -66,8 +70,9 @@
                             @endif
                         @endauth
                     @endif
+
                 </ul>
-              </div>
-            </div>
+</div>
+            
     </div>
 </nav>
