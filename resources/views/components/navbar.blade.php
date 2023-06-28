@@ -33,7 +33,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Annunci</a>
+                        <a class="nav-link" href="">Annunci</a>
                     </li>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Cosa ti serve?"
