@@ -34,6 +34,15 @@
         <label for="detail"> Dettagli </label>
         <input wire:model="detail" type="text" class="form-control">
     </div>
+
+    <div>
+        <select>
+            @foreach ($categories as $category)
+            <option value="{{$category->id}}">{{$category->name}} {{$category->surname}}</option>
+            @endforeach
+        </select>
+    </div>
+
     <div class="mb-3">
         <label for="image"> Image </label>
         <input wire:model="image" type="file" class="form-control">
