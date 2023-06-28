@@ -21,17 +21,14 @@
                             Categorie
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Categoria 1</a></li>
+                            @foreach ($categories as $category)
+                            <li><a class="dropdown-item" href="#">{{$category->name}}</a></li>
                             <li>
                                 <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Categoria 2</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Categoria 3</a></li>
-                        </ul>
-                    </li>
+                            </li>  
+                            @endforeach
+                        </ul>   
+                          
                     <li class="nav-item">
                         <a class="nav-link anim" href="#">Annunci</a>
                     </li>
