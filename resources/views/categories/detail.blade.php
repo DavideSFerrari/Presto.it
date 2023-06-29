@@ -6,7 +6,7 @@
         <div class="card" style="width: 18rem;">
             <img src="http://picsum.photos/200" class="card-img-top" alt="...">
             <div class="card-body">
-            <h5 class="card-title">{{$announcement->category}}</h5>
+            <h5 class="card-title">{{$announcement->category_id}}</h5>
             <p class="card-text">{{$announcement->price}} euro</p>
             <p class="card-text">{{$announcement->description}}</p>
             <p class="card-text">{{$announcement->detail}}</p>

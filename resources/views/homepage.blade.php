@@ -54,9 +54,6 @@
         </div>
         @endforeach
     </div>
-</x-main> 
 
-          </x-card>
-      </div>
   </x-main> 
   
