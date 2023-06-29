@@ -27,13 +27,13 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active ">
-                <img src="{{ url('/img/gatto1.jpg') }}" class="d-block w-70 center-block" alt="...">
+                <img src="{{ url('/img/gatto1.jpg') }}" class="d-block w-70" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url('/img/gatto2.jpg') }}" class="d-block w-70" alt="...">
               </div>
               <div class="carousel-item ">
-                <img src="{{ url('/img/gatto2.jpg') }}" class="d-block w-70 center-block" alt="...">
-              </div>
-              <div class="carousel-item ">
-                <img src="{{ url('/img/gatto3.jpg') }}" class="d-block w-70 center-block" alt="...">
+                <img src="{{ url('/img/gatto3.jpg') }}" class="d-block w-70" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
