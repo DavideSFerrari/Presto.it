@@ -34,7 +34,7 @@ class CreateAnnouncement extends Component
             'title'=>$this->title,
             'description'=>$this->description,
             'price'=>$this->price,
-            'detail'=>$this->detail,
+            'detail'=>$this->detail->nullable,
             'image'=>$this->image,
             ]);
             session()->flash('message', 'Annuncio inserito con successo');
