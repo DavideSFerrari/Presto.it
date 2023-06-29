@@ -39,21 +39,21 @@
                 
 
 
-    <div class="container my-5">
-    <div class="row">
-        @foreach ($announcements as $announcement)
-        <div class="card m-2" style="width: 18rem;">
-            <img src="http://picsum.photos/200" class="card-img-top my-3" alt="...">
-            <div class="card-body">
-            <h5 class="card-title">{{$announcement->title}}</h5>
-            <p class="card-text">{{$announcement->price}} euro</p>
-            <p class="card-text">{{$announcement->description}}</p>
-            <p class="card-text">{{$announcement->detail}}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="container my-5">
+            <div class="row">
+                @foreach ($announcements as $announcement)
+                <div class="card m-2" style="width: 18rem;">
+                    <img src="http://picsum.photos/200" class="card-img-top my-3" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{$announcement->title}}</h5>
+                    <p class="card-text">{{$announcement->price}} euro</p>
+                    <p class="card-text">{{$announcement->description}}</p>
+                    <p class="card-text">{{$announcement->detail}}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                @endforeach
             </div>
-        </div>
-        @endforeach
-    </div>
 
       </div>
   </x-main> 
