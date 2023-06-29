@@ -1,5 +1,5 @@
 @foreach ($announcements as $announcement)
-          <div class="card" style="width: 18rem;">
+          <div class="card m-4" style="width: 18rem;">
               <img src="http://picsum.photos/200" class="card-img-top" alt="...">
               <div class="card-body">
               <h5 class="card-title">{{$announcement->title}}</h5>
