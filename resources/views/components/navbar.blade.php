@@ -61,7 +61,27 @@
                     
 
 
-                        
+                        @else
+                            <li class="nav-item"><a class="nav-link anim" href="{{ route('login') }}"
+                                    class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 ">Log
+                                    in</a></li>
+
+        
+            
+            @if (Route::has('login'))
+                @auth
+                <a class="nav-link anim mx-2" href="#" class="my-2">Ciao, {{ Auth::user()->email }},</a>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="btn-1" onclick="event.preventDefault(); this.closest('form').submit();">
+                            <li class="nav-item">
+                                <a class="nav-link anim ">
+                                    Logout
+                                </a>
+                            </li>
+                        </button>
+                    </form>
+                    <li class="nav-item">
                 
             </li>
                 @else
