@@ -23,7 +23,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             @foreach ($categories as $category)
-                            <li><a class="dropdown-item" href="#">{{$category->name}}</a></li>
+                            <li><a class="dropdown-item" href="{{route('categories.detail', ['category' => $category['id']])}}">{{$category->name}}</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>  
@@ -58,7 +58,12 @@
                                 @endif
                     </li>
 
-                    </li>
+                    
+
+
+                       
+                
+            </li>
                 @else
                     <li class="nav-item"><a class="nav-link anim" href="{{ route('login') }}"
                             class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 ">Log
