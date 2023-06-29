@@ -2,7 +2,7 @@
     <div class="row"> 
         @foreach ($announcements as $announcement)
           <div class="card m-3" style="width: 18rem;">
-              <img src="http://picsum.photos/200" class="card-img-top" alt="...">
+              <img src="http://picsum.photos/200" class="card-img-top my-3" alt="...">
               <div class="card-body">
               <h5 class="card-title">{{$announcement->title}}</h5>
               <p class="card-text">{{$announcement->price}} euro</p>
