@@ -19,7 +19,7 @@
             <p class="card-text">{{$announcement->price}} euro</p>
             <p class="card-text">{{$announcement->description}}</p>
             <p class="card-text">{{$announcement->detail}}</p>
-            <a href="#" class="btn btn-primary">Visualizza dettaglio</a>
+            <a href="{{ route('announcements.detail', $announcement) }}" class="btn btn-primary">Visualizza dettaglio</a>
             </div>
         </div>
         @endforeach
@@ -28,3 +28,5 @@
 
 
         </x-main>   
+
+       
