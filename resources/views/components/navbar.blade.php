@@ -24,9 +24,6 @@
                         <ul class="dropdown-menu">
                             @foreach ($categories as $category)
                             <li><a class="dropdown-item" href="#">{{$category->name}}</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>  
                             @endforeach
                         </ul>   
                           

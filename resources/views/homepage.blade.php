@@ -49,7 +49,7 @@
                     <p class="card-text">{{$announcement->price}} euro</p>
                     <p class="card-text">{{$announcement->description}}</p>
                     <p class="card-text">{{$announcement->detail}}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary">Visualizza dettaglio</a>
                     </div>
                 </div>
                 @endforeach
