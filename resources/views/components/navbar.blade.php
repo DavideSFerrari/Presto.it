@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary ">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between ps-1 pe-1" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-around ps-1 pe-1" id="navbarSupportedContent">
 
                 <div class="">
                     <a class="navbar-brand anim" href="{{ route('homepage') }}"
@@ -33,7 +33,7 @@
                         <a class="nav-link anim" href="{{route('show')}}">Annunci</a>
                     </li>
 
-                
+                    
                     
                     @if (Route::has('login'))
                         @auth
@@ -49,8 +49,17 @@
                                 </button>
                             </form>
                             <li class="nav-item">
-                        
+
+                                @if (Route::has('login'))
+                                @auth
+                                <a class="btn anim2 p-2" href="{{route('announcements.create')}}" role="button">Inserisci annuncio</a>
+                                @endauth
+                                @endif
                     </li>
+
+                    
+
+
                         @else
                             <li class="nav-item"><a class="nav-link anim" href="{{ route('login') }}"
                                     class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 ">Log

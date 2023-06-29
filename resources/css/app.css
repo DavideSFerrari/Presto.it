@@ -6,6 +6,10 @@
     
 }
 
+.btn-2 {
+    border-width: 1px solid red;
+}
+
 .texthover:hover {
     color: red;
     text-decoration: none;
@@ -40,3 +44,28 @@
     width: 70%;
 }
 
+.img {
+    width: 100%;
+    height: 90vh;
+  }
+
+
+
+  .anim2 {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid #c5bebe;
+    box-sizing: border-box;
+    color: #000000;
+    display: inline-block;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    will-change: transform;
+   }
+   
+   .anim2:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+   }

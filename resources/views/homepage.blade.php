@@ -8,13 +8,13 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active ">
-                <img src="{{ url('/img/gatto1.jpg') }}" class="d-block w-70" alt="...">
+                <img src="{{ url('/img/prova1.jpg') }}" class="d-block img w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="{{ url('/img/gatto2.jpg') }}" class="d-block w-70" alt="...">
+                <img src="{{ url('/img/prova2.jpg') }}" class="d-block img w-100 " alt="..." style="width: 1564px;">
               </div>
               <div class="carousel-item ">
-                <img src="{{ url('/img/gatto3.jpg') }}" class="d-block w-70" alt="...">
+                <img src="{{ url('/img/gatto3.jpg') }}" class="d-block img w-100" alt="..." style="width: 1564px;">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -28,18 +28,14 @@
           </div>
 
 
-                @if (Route::has('login'))
-                        @auth
-                        <a class="btn btn-primary" href="{{route('announcements.create')}}" role="button">Inserisci annuncio</a>
-                        @endauth
-                    @endif
+                
 
 
-    <div class="container">
+    <div class="container my-5">
     <div class="row">
         @foreach ($announcements as $announcement)
-        <div class="card" style="width: 18rem;">
-            <img src="http://picsum.photos/200" class="card-img-top" alt="...">
+        <div class="card m-2" style="width: 18rem;">
+            <img src="http://picsum.photos/200" class="card-img-top my-3" alt="...">
             <div class="card-body">
             <h5 class="card-title">{{$announcement->title}}</h5>
             <p class="card-text">{{$announcement->price}} euro</p>
