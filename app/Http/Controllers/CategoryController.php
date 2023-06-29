@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function detailCategory(Category $category, Announcement $announcement) {
+    public function detailCategory(Category $category) {
         $announcements = Announcement::all();
         return view('categories.detail', compact('category'), compact('announcements'));
     }
