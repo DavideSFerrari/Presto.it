@@ -35,9 +35,16 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+    <h5 class="card-title">Titolo:{{$announcement->title}}</h5>
+    <p class="card-text">Descrizione:{{$announcement->description}}</p>
+    <p class="card-text">Descrizione:{{$announcement->price}}</p>
+    
         </div>
     </div>
 </div>
 
 
 </x-main>
+
+
+
