@@ -53,12 +53,7 @@
                                 <a class="btn anim2 p-2" href="{{route('announcements.create')}}" role="button">Inserisci annuncio</a>
                                 @endauth
                                 @endif
-                    </li>
-
-                    
-
-
-                       
+                    </li> 
                 
             </li>
                 @else
