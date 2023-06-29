@@ -10,7 +10,7 @@
               <p class="card-text">{{$announcement->detail}}</p>
               <a href="{{route('announcements.detail', $announcement)}}" class="btn btn-primary">Visualizza dettaglio</a>
               <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
-              <p class="card-footer">Pubblicato da: </p>
+              
               </div>
           </div>
           @endforeach
