@@ -9,8 +9,6 @@
         </x-card>
     </div>
     
-
-
-        </x-main>   
+</x-main>   
 
        
