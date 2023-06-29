@@ -6,7 +6,9 @@
               <p class="card-text">{{$announcement->price}} euro</p>
               <p class="card-text">{{$announcement->description}}</p>
               <p class="card-text">{{$announcement->detail}}</p>
-              <a href="#" class="btn btn-primary">Visualizza dettaglio</a>
+              <a href="#" class="btn btn-primary m-1">Visualizza dettaglio</a>
+              <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
+              <p class="card-footer">Pubblicato da: </p>
               </div>
           </div>
           @endforeach
