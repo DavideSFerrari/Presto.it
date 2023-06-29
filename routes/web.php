@@ -21,5 +21,4 @@ Route::get('/show', [PageController::class,'show'])->name('show');
 
 Route::get('/create/announcement',[AnnouncementController::class,'createAnnouncement'])->name('announcements.create');
 Route::get('/detail/announcement/{announcement}', [AnnouncementController::class, 'detailAnnouncement'])->name('announcements.detail');
-Route::get('/detail/category/{category}', [CategoryController::class, 'detailCategory'] )->name('categories.detail');
 Route::get('/category/{category}', [CategoryController::class, 'categoryShow'] )->name('categories.detail');
