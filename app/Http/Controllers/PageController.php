@@ -20,6 +20,9 @@ class PageController extends Controller
         return view('show', compact('announcements'));;
         
     }
+
+
+    
 }
 
   
