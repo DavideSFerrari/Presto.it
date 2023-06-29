@@ -15,6 +15,16 @@
     text-decoration: none;
 }
 
+
+.p-custom {
+    padding: 20px;
+}
+.m-custom {
+    margin: 3%;
+}
+
+
+
 .anim{
     color: #18272F;
     position: relative;

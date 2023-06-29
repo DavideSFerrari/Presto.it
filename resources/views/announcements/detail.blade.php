@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="container">
-      <div class="row ">
+      <div class="d-flex">
         <section class="w-50">
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
@@ -42,7 +42,7 @@
             </div>
         </section>
 
-            <section class="">
+            <section class="m-custom">
                 <h5 class="card-title">Titolo:{{ $announcement->title }}</h5>
                 <p class="card-text">Descrizione:{{ $announcement->description }}</p>
                 <p class="card-text">Prezzo:{{ $announcement->price }}</p>
