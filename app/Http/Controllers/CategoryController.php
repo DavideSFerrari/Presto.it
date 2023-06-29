@@ -12,4 +12,10 @@ class CategoryController extends Controller
         $announcements = Announcement::all();
         return view('categories.detail', compact('category'), compact('announcements'));
     }
+
+    public function categoryShow(Category $category){
+        $announcements = Announcement::all();
+
+        return view ('categories.detail', compact('category'), compact('announcements'));
+    }
 }

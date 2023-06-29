@@ -10,7 +10,7 @@
               <hr>
               <p class="card-text product-price">{{$announcement->price}} euro</p>
               <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
-              <p class="card-footer">Pubblicato da: </p>
+              
               </div>
           </div>
           @endforeach
