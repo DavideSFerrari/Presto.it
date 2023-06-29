@@ -10,4 +10,5 @@ class AnnouncementController extends Controller
         
         return view('announcements.create');
     }
+
 }
