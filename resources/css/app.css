@@ -183,3 +183,11 @@ a{
 .product-links a:hover {
     color: #fbb72c;
 }
+
+
+.card-custom {
+    transition: transform 250ms, opacity 400ms;
+  }
+  .card-custom:hover {
+    transform: scale(1.05);
+  }
