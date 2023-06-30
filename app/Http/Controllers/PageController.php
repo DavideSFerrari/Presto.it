@@ -17,10 +17,9 @@ class PageController extends Controller
     public function show (Announcement $announcements){
         
         $announcements = Announcement::all();
-        return view('show', compact('announcements'));;
+        return view('show', compact('announcements'));
         
     }
-
 
     
 }
