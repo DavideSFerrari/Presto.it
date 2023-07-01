@@ -35,7 +35,18 @@
                     
                     @if (Route::has('login'))
                         @auth
-                        <a class="nav-link anim mx-2" href="#" class="my-2">Ciao, {{ Auth::user()->email }},</a>
+                        <div class="sezioneUtente">
+                        <a class="nav-link anim mx-2" href="#" class="my-2">Ciao {{ Auth::user()->name }}, cosa vuoi fare?</a>
+                        </div>
+
+                        <li class="nav-item">
+                                @if (Route::has('login'))
+                                @auth
+                                <a class="btn anim2 p-2" href="{{route('announcements.create')}}" role="button">Inserisci annuncio</a>
+                                @endauth
+                                @endif
+                            </li> 
+
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
                                 <button class="btn-1" onclick="event.preventDefault(); this.closest('form').submit();">
@@ -46,14 +57,6 @@
                                     </li>
                                 </button>
                             </form>
-                            <li class="nav-item">
-
-                                @if (Route::has('login'))
-                                @auth
-                                <a class="btn anim2 p-2" href="{{route('announcements.create')}}" role="button">Inserisci annuncio</a>
-                                @endauth
-                                @endif
-                    </li> 
                 
             </li>
                 @else

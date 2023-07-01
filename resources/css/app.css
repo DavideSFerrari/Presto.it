@@ -240,3 +240,8 @@ a{
       height: 100%;
       padding-top: 7rem;
   }
+
+  .sezioneUtente {
+        border-left: 1px solid black;
+        margin-left: 8px;
+  }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +17,14 @@ use App\Http\Controllers\PageController;
 |
 */
 
+// Page
 Route::get('/', [PageController::class,'homepage'])->name('homepage');
 Route::get('/show', [PageController::class,'show'])->name('show');
 
+// Announcement
 Route::get('/create/announcement',[AnnouncementController::class,'createAnnouncement'])->name('announcements.create');
 Route::get('/detail/announcement/{announcement}', [AnnouncementController::class, 'detailAnnouncement'])->name('announcements.detail');
 Route::get('/category/{category}', [CategoryController::class, 'categoryShow'] )->name('categories.detail');
-
 
 
 //Rotte revisore
@@ -30,3 +32,6 @@ Route::get('/category/{category}', [CategoryController::class, 'categoryShow'] )
 Route::get('/revisor/homepage', [RevisorController::class,'homepage'])->name('revisor.homepage');
 Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class,'acceptAnnouncement'])->name('revisor.accept_announcement');
 Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class,'rejectAnnouncement'])->name('revisor.reject_announcement');
+
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
+Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
