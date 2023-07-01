@@ -34,7 +34,7 @@ class CreateAnnouncement extends Component
     public function store(){
 
     $this->validate();
-    dd($this->category);
+    // dd($this->category);
         $category = Category::find($this->category);
 
         
