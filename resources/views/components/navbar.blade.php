@@ -7,8 +7,7 @@
     <div class="collapse navbar-collapse justify-content-around ps-1 pe-1" id="navbarSupportedContent">
 
         <div class="">
-            <a class="navbar-brand anim" href="{{ route('homepage') }}"
-                class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Presto.it</a>
+            <a class="navbar-brand anim" href="{{ route('homepage') }}">Presto.it</a>
             </div>
 
         <div class=""> 
