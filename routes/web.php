@@ -29,9 +29,12 @@ Route::get('/category/{category}', [CategoryController::class, 'categoryShow'] )
 
 //Rotte revisore
 
-Route::get('/revisor/homepage', [RevisorController::class,'index'])->name('revisor.index');
+Route::get('/revisor/homepage', [RevisorController::class,'homepage'])->name('revisor.homepage');
 Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class,'acceptAnnouncement'])->name('revisor.accept_announcement');
 Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class,'rejectAnnouncement'])->name('revisor.reject_announcement');
 
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+// Ricerca annuncio
+Route::get('/ricerca/annuncio', [RevisorController::class, 'searchAnnouncements'])->name('announcements.search');
