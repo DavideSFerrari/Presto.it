@@ -49,7 +49,7 @@
 <li class="nav-item">
     <a class="nav-link btn btn-outline-success btm-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">Zona Revisore
         <span class="position-absolulute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            {{App\Model\Announcement::toBeRevisionedCount()}}
+            {{App\Models\Announcement::toBeRevisionedCount()}}
             <span class="visually-hidden">Unread Message</span>
         </span>
     </a>

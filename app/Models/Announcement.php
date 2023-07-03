@@ -29,7 +29,7 @@ public function setAcepted($value){
 
 }
 
-public function toBeRevisionedCount(){
+public static function toBeRevisionedCount(){
     return Announcement::where('is_accepted', NULL)->count();
 }
 }
