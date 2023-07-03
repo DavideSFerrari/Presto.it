@@ -56,6 +56,17 @@
                                     </li>
                                 </button>
                             </form>
+
+                            @if (Auth::user()->is_revisor)
+                                <li class="nav-item">
+                                    <a class="nav-link anim" aria-current="page" href="{{route('revisor.index')}}">
+                                        Zona Revisore
+                                        <span class="badge bg-danger">{{\App\Models\Announcement::ToBeRevisionedCount()}}
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </a>
+                                </li>  
+                            @endif
                 
             </li>
                 @else
