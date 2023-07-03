@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12 text-light p-5">
                 <h1 class="display-2">
-                    {{announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
+                    {{$announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
                 </h1>
             </div>
         </div>

@@ -21,5 +21,14 @@ return view('revisor.index', compact('announcement_to_check'));
 
     }
 
+    public function acceptAnnouncement(Announcement $announcement){
 
+        $announcement->setAccepted(true);
+        return redirect()->back()->with('message', 'Hai accettato l\'annuncio');
+}
+public function rejectAnnouncement(Announcement $announcement){
+
+    $announcement->setAccepted(false);
+    return redirect()->back()->with('message', 'Hai rifiutato l\'annuncio');
+}
 }
