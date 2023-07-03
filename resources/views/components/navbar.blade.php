@@ -25,7 +25,7 @@
                             <li><a class="dropdown-item" href="{{route('categories.detail', compact('category'))}}">{{$category->name}}</a></li>
                             @endforeach
                         </ul>   
-                          
+                    </li>     
                     <li class="nav-item">
                         <a class="nav-link anim" href="{{route('show')}}">Annunci</a>
                     </li>
@@ -44,7 +44,7 @@
                                 <a class="btn anim2 p-2" href="{{route('announcements.create')}}" role="button">Inserisci annuncio</a>
                                 @endauth
                                 @endif
-                            </li> 
+                            
 @if (Auth::user()->is_revisor)
 <li class="nav-item">
     <a class="nav-link btn btn-outline-success btm-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">Zona Revisore
@@ -66,7 +66,7 @@
                                 </button>
                             </form>
                 
-            </li>
+                        </li>
                 @else
                     <li class="nav-item"><a class="nav-link anim" href="{{ route('login') }}"
                             class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 ">Log
