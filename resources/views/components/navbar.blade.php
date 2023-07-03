@@ -45,7 +45,16 @@
                                 @endauth
                                 @endif
                             </li> 
-
+@if (Auth::user()->is_revisor)
+<li class="nav-item">
+    <a class="nav-link btn btn-outline-success btm-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">Zona Revisore
+        <span class="position-absolulute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{App\Model\Announcement::toBeRevisionedCount()}}
+            <span class="visually-hidden">Unread Message</span>
+        </span>
+    </a>
+</li>
+@endif
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
                                 <button class="btn-1" onclick="event.preventDefault(); this.closest('form').submit();">
@@ -56,17 +65,6 @@
                                     </li>
                                 </button>
                             </form>
-
-                            @if (Auth::user()->is_revisor)
-                                <li class="nav-item">
-                                    <a class="nav-link anim" aria-current="page" href="{{route('revisor.index')}}">
-                                        Zona Revisore
-                                        <span class="badge bg-danger">{{\App\Models\Announcement::ToBeRevisionedCount()}}
-                                            <span class="visually-hidden">unread messages</span>
-                                        </span>
-                                    </a>
-                                </li>  
-                            @endif
                 
             </li>
                 @else
