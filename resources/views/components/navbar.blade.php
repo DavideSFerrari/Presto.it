@@ -30,6 +30,10 @@
                         <a class="nav-link anim" href="{{route('show')}}">Annunci</a>
                     </li>
 
+                    <li class="nav-item">
+                        <x-_locale lang="en" nation='gb'/>
+                    </li>
+                    
                     
                     
                     @if (Route::has('login'))
