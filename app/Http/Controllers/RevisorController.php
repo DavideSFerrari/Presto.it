@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Mail\BecomeRevisor;
 use App\Models\Announcement;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -41,9 +42,7 @@ public function becomeRevisor(){
 }
 
 public function makeRevisor(User $user){
-    
     Artisan::call('presto:make_user_revisor', ["email"=>$user->email]);
-    
     return redirect ('/')->with('message','Complimenti L\'utente è diventato revisore');
 }
 
