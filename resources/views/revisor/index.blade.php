@@ -11,6 +11,7 @@
     </div>
 
     @if ($announcement_to_check)
+    @foreach ($announcement_to_check as $announcementss)
     <div class="container">
         <div class="row">
 
@@ -43,6 +44,7 @@
             </div>
         </div>
     </div>
+    @endforeach
     @endif
     
 </x-main>
