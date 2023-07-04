@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use App\Mail\BecomeRevisor;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
@@ -34,12 +34,16 @@ public function rejectAnnouncement(Announcement $announcement){
 }
 
 public function becomeRevisor(){
-    Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
+   $obj = new BecomeRevisor(Auth::user());
+    Mail::to('admin@presto.it')->send($obj);
+    
     return redirect()->back()->with('message','Complimenti! Richiesta effettuata correttamente');
 }
 
 public function makeRevisor(User $user){
-    Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]);
+    
+    Artisan::call('presto:make_user_revisor', ["email"=>$user->email]);
+    
     return redirect ('/')->with('message','Complimenti L\'utente è diventato revisore');
 }
 
