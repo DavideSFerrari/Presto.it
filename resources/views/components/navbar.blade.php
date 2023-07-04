@@ -11,10 +11,8 @@
         </div>
 
         <div class="">
-
-
-
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle anim" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -28,6 +26,7 @@
                         @endforeach
                     </ul>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link anim" href="{{ route('show') }}">Annunci</a>
                 </li>
@@ -44,7 +43,6 @@
                             <a class="nav-link anim mx-2" href="#" class="my-2">Ciao {{ Auth::user()->name }}, cosa
                                 vuoi fare?</a>
                         </div>
-
                         <li class="nav-item">
                             @if (Route::has('login'))
                                 @auth
@@ -52,46 +50,49 @@
                                         annuncio</a>
                                 @endauth
                             @endif
-
-                            @if (Auth::user()->is_revisor)
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-outline-success btm-sm position-relative" aria-current="page"
-                                href="{{ route('revisor.index') }}">Zona Revisore
-                                <span class="position-absolulute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    {{ App\Models\Announcement::toBeRevisionedCount() }}
-                                    <span class="visually-hidden">Unread Message</span>
-                                </span>
-                            </a>
                         </li>
-                    @endif
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <button class="btn-1" onclick="event.preventDefault(); this.closest('form').submit();">
+
+                        @if (Auth::user()->is_revisor)
                             <li class="nav-item">
-                                <a class="nav-link anim ">
-                                    Logout
+                                <a class="nav-link btn btn-outline-success btm-sm position-relative" aria-current="page"
+                                href="{{ route('revisor.index') }}">Zona Revisore
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    {{ App\Models\Announcement::toBeRevisionedCount() }}
+                                        <span class="visually-hidden">Unread Message</span>
+                                    </span>
                                 </a>
                             </li>
-                        </button>
-                    </form>
+                        @endif
 
-                    </li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="btn-1" onclick="event.preventDefault(); this.closest('form').submit();">
+                                <li class="nav-item">
+                                    <a class="nav-link anim ">
+                                        Logout
+                                    </a>
+                                </li>
+                            </button>
+                        </form>
+
                 @else
-                    <li class="nav-item"><a class="nav-link anim" href="{{ route('login') }}"
-                            class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 ">Log
-                            in</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link anim" href="{{ route('login') }}"
+                            class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 ">Login</a>
+                    </li>
 
 
-                    @if (Route::has('register'))
-                        <li class="nav-item"><a class="nav-link anim" href="{{ route('register') }}"
+                        @if (Route::has('register'))
+                            <li class="nav-item"><a class="nav-link anim" href="{{ route('register') }}"
                                 class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        </li>
-                    @endif
-                @endauth
+                            </li>
+                        @endif
+                    @endauth
                 @endif
 
             </ul>
         </div>
+
 
     </div>
 </nav>
