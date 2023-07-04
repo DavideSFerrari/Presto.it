@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use App\Mail\BecomeRevisor;
 use App\Models\Announcement;
 use App\Models\User;
@@ -15,13 +15,13 @@ class RevisorController extends Controller
 
    
 
-    public function index (){
+    public function index (Announcement $announcement){
 
-$announcement_to_check= Announcement::where('is_accepted', null)->first();
-return view('revisor.index', compact('announcement_to_check'));
-
-
-    }
+        $announcement_to_check= Announcement::where('is_accepted', null)->first();
+        return view('revisor.index', compact('announcement_to_check'), compact('announcement'));
+        
+        
+            }
 
     public function acceptAnnouncement(Announcement $announcement){
 
@@ -35,7 +35,9 @@ public function rejectAnnouncement(Announcement $announcement){
 }
 
 public function becomeRevisor(){
-    Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
+   $obj = new BecomeRevisor(Auth::user());
+    Mail::to('admin@presto.it')->send($obj);
+    
     return redirect()->back()->with('message','Complimenti! Richiesta effettuata correttamente');
 }
 
