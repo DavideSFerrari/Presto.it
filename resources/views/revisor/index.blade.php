@@ -33,29 +33,29 @@
                     <h1>{{ $announcement_to_check->title }}</h1>
                     <p>{{ $announcement_to_check->description }}</p>
                     <p class="card-footer">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}
+                        <div>
+                            <div class="d-flex ">
+                                <form
+                                    action="{{ route('revisor.accepted_announcement', ['announcement' => $announcement_to_check]) }}"
+                                    method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-success shadow">Accetta</button>
+                                </form>
+        
+                                <!-- <div class="col-6 col-md-3 text end"> -->
+                                <form
+                                    action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
+                                    method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                                </form>
+                                <!-- </div> -->
+                            </div>
+                        </div>
                 </div>
-                </p>
-                <div>
-                    <div class="d-flex ">
-                        <form
-                            action="{{ route('revisor.accepted_announcement', ['announcement' => $announcement_to_check]) }}"
-                            method="POST">
-                            @csrf
-                            @method('PATCH')
-                            <button type="submit" class="btn btn-success shadow">Accetta</button>
-                        </form>
-
-                        <!-- <div class="col-6 col-md-3 text end"> -->
-                        <form
-                            action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
-                            method="POST">
-                            @csrf
-                            @method('PATCH')
-                            <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
-                        </form>
-                        <!-- </div> -->
-                    </div>
-                </div>
+                
 
             </div>
         </div>
