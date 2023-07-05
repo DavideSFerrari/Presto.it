@@ -54,7 +54,7 @@
 
                         @if (Auth::user()->is_revisor)
                             <li class="nav-item">
-                                <a class="nav-link btn btn-outline-success btm-sm position-relative" aria-current="page"
+                                <a class="btn anim2 p-2 mx-2 position-relative" aria-current="page"
                                 href="{{ route('revisor.index') }}">Zona Revisore
                                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     {{ App\Models\Announcement::toBeRevisionedCount() }}
