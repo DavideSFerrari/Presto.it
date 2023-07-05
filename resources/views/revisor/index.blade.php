@@ -32,7 +32,7 @@
                 <div class="m-custom-2">
                     <h1>{{ $announcement_to_check->title }}</h1>
                     <p>{{ $announcement_to_check->description }}</p>
-                    <p>{{ $announcement_to_check->category->name }}</p>
+                    <p class="text-uppercase">{{ $announcement_to_check->category->name }}</p>
                     <p class="card-footer">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}
                         <div>
                             <div class="d-flex ">

@@ -9,7 +9,7 @@
                         <p class="card-text product-catagory text-break">{{ $announcement->detail }}</p>
                         <h5 class="card-title text-break">{{ $announcement->title }}</h5>
                         <p class="card-text py-2 text-break text-lowercase">{{ $announcement->description }}</p>
-                        <p class="card-text py-2 text-break text-lowercase">{{ $announcement->category->name }}</p>
+                        <p class="card-text py-2 text-break text-uppercase">{{ $announcement->category->name }}</p>
                         <hr class="text-dark">
                         <p class="card-text product-price">{{ $announcement->price }} euro</p>
                         <p class="card-footer">Pubblicato il: {{ $announcement->created_at->format('d/m/Y') }}</p>
