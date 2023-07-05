@@ -1,4 +1,4 @@
-<div class="p-5 rounded-4 shadow">
+<div class="p-5 rounded-4 my-5 shadow bg-white">
    <h1> Inserisci annuncio </h1>
    
    @if (session()->has ('message'))

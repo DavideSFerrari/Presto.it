@@ -16,6 +16,10 @@
     border-radius: 15px;
 }
 
+.top-15 {
+    top: 15% !important;
+}
+
 .texthover:hover {
     color: red;
     text-decoration: none;
