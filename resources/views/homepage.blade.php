@@ -1,19 +1,21 @@
 <x-main>
 
-  <div class="my-5">
+  <div class="my-5 ">
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active ">
                 <img src="{{ url('/img/prova1.jpg') }}" class="d-block img w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block" >
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                  </div>
-                  <div class="container">
-                    <div class="hero-block__wrapper">
-                        
+                <div class="container">
+                <div class="row"> 
+                <div class="carousel-caption d-none d-md-block  ">
+                    <div class="hero-block__wrapper position-relative div-custom shadow h-50">
+                        <div class="position-absolute container">
+                            <h1 class="text-dark">Annuncio</h1>
+                        </div>
                     </div>
                   </div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
