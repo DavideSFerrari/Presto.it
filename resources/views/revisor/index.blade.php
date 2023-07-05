@@ -51,6 +51,8 @@
                                     @method('PATCH')
                                     <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
                                 </form>
+
+                                
                                 <!-- </div> -->
                             </div>
                         </div>
