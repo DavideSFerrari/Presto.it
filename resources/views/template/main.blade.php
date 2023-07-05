@@ -27,7 +27,7 @@
     
     <x-navbar></x-navbar>
     
-    <div class="min-vh-100">
+    <div class="min-vh-100 my-5">
         {{$slot}}
     </div>
 
