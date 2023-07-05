@@ -21,6 +21,7 @@ class Announcement extends Model
         $array = [
             'id' => $this->id,
             'title' => $this->title,
+            'description' => $this->description,
             'body' => $this->body,
             'category' => $category,
         ];
