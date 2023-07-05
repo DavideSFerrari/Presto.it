@@ -46,7 +46,7 @@
                         <li class="nav-item">
                             @if (Route::has('login'))
                                 @auth
-                                    <a class="btn anim2 p-2" href="{{ route('announcements.create') }}" role="button">Inserisci
+                                    <a href="{{ route('announcements.create') }}" role="button" class="btn anim2 p-2">Inserisci
                                         annuncio</a>
                                 @endauth
                             @endif

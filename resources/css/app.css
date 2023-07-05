@@ -131,7 +131,10 @@
     background-color: #1A1A1A;
    }
 
-
+   .anim2:active {
+    color: #fff;
+    background-color: #1A1A1A;
+   }
 
 a{
     text-decoration: none;
