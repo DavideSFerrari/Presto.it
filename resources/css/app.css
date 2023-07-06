@@ -230,7 +230,7 @@ a{
     border-radius: 1rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
-    outline: 1px solid blue;
+    outline: 2px solid blue;
 }
 
 .product-price small {
