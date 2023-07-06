@@ -28,7 +28,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link anim" href="{{ route('announcements.index') }}">Annunci</a>
+                    <a class="nav-link anim @if(request()->routeIs('announcements.index')) border-bottom border-5 border-black @else '' @endif" href="{{ route('announcements.index') }}">Annunci</a>
                 </li>
 
                 <li class="nav-item">

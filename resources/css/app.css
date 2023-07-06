@@ -99,10 +99,6 @@
     transform: scaleX(1);
 }
 
-.anim:active::before {
-    transform-origin: left;
-    transform: scaleX(1);
-}
 
 .w-70{
     width: 70%;
