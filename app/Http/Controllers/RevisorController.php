@@ -33,6 +33,7 @@ class RevisorController extends Controller
     return redirect()->back()->with('message', 'Hai rifiutato l\'annuncio');
             }
 
+
     public function becomeRevisor(){
    
     $obj = new BecomeRevisor(Auth::user());
