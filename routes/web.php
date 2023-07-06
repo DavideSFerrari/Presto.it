@@ -5,6 +5,8 @@ use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RevisorController;
+use Laravel\Socialite\Contracts\Provider;
+use App\Http\Controllers\Auth\ProviderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,4 +50,9 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 
 // Ricerca annuncio
 Route::get('/ricerca/annuncio', [RevisorController::class, 'searchAnnouncements'])->name('announcements.search');
+
+// Login Google
+ 
+Route::get('/auth/{provider}/redirect', [ProviderController::class, 'redirect']);
+Route::get('/auth/{provider}/callback', [ProviderController::class, 'callback']);
 

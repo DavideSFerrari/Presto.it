@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'provider',
+        'provider_id',
         'announcement_id'
     ];
 
@@ -49,5 +51,6 @@ class User extends Authenticatable
 
         return $this->hasMany(Announcement::class);
     }
+ 
 
 }
