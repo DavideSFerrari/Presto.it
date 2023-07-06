@@ -42,6 +42,10 @@
 .p-custom {
     padding: 20px;
 }
+
+.p-custom-2 {
+    padding: 60px!important;
+}
 .m-custom {
     margin: 3%;
 }

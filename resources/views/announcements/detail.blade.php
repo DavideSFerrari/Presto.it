@@ -6,7 +6,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container bg-white p-custom-2 ">
       <div class="d-flex">
         <section class="w-50">
             <div id="carouselExampleIndicators" class="carousel slide">
