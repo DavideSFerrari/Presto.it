@@ -46,7 +46,7 @@
                         <li class="nav-item">
                             @if (Route::has('login'))
                                 @auth
-                                    <a href="{{ route('announcements.create') }}" role="button" class="btn anim2 p-2">Inserisci
+                                    <a href="{{ route('announcements.create') }}" role="button" class="btn anim2 p-2 @if(request()->routeIs('announcements.create')) bg-black text-white @else '' @endif">Inserisci
                                         annuncio</a>
                                 @endauth
                             @endif
@@ -54,7 +54,7 @@
 
                         @if (Auth::user()->is_revisor)
                             <li class="nav-item">
-                                <a class="btn anim2 p-2 mx-2 position-relative" aria-current="page"
+                                <a class="btn anim2 p-2 mx-2 position-relative @if(request()->routeIs('revisor.index')) bg-black text-white @else '' @endif" aria-current="page"
                                 href="{{ route('revisor.index') }}">Zona Revisore
                                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     {{ App\Models\Announcement::toBeRevisionedCount() }}
