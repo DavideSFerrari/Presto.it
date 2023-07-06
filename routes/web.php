@@ -17,17 +17,24 @@ use App\Http\Controllers\RevisorController;
 |
 */
 
-// Page
-Route::get('/', [PageController::class,'homepage'])->name('homepage');
-Route::get('/show', [PageController::class,'show'])->name('show');
+// --- PAGE
 
-// Announcement
+Route::get('/', [PageController::class,'homepage'])->name('homepage');
+
+// Cambio Lingua
+Route::post('/lingua/{lang}', [PageController::class, 'setLanguage'])->name('set_language_locale');
+
+
+// --- ANNOUNCEMENT
+
+Route::get('/announcement/homepage', [AnnouncementController::class,'index'])->name('announcements.index');
 Route::get('/create/announcement',[AnnouncementController::class,'createAnnouncement'])->name('announcements.create');
 Route::get('/detail/announcement/{announcement}', [AnnouncementController::class, 'detailAnnouncement'])->name('announcements.detail');
 Route::get('/category/{category}', [CategoryController::class, 'categoryShow'] )->name('categories.detail');
 
 
-//Rotte revisore
+
+// --- REVISORE
 
 Route::get('/revisor/homepage', [RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class,'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accepted_announcement');
@@ -36,11 +43,9 @@ Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class,'reje
 // Richiedi di diventare revisore
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('mail.become_revisor');
 
-//Rendi utente revisore
+// Rendi utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 // Ricerca annuncio
 Route::get('/ricerca/annuncio', [RevisorController::class, 'searchAnnouncements'])->name('announcements.search');
 
-// Cambio Lingua
-Route::post('/lingua/{lang}', [PageController::class, 'setLanguage'])->name('set_language_locale');
