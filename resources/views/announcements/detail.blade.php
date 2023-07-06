@@ -45,6 +45,7 @@
             <section class="m-custom">
                 <h5 class="card-title">Titolo:{{ $announcement->title }}</h5>
                 <p class="card-text">Descrizione:{{ $announcement->description }}</p>
+                <p class="card-text">Dettaglio:{{ $announcement->detail }}</p>
                 <p class="card-text">Categoria:{{ $announcement->category->name }}</p>
                 <p class="card-text">Prezzo:{{ $announcement->price }}</p>
             </section>
