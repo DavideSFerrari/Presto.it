@@ -1,5 +1,5 @@
 <x-main>
-    <div class="container my-5">
+    <div class="container m-login-register">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8">
             <form class="p-5 shadow rounded-4 bg-white" action="{{route('login')}}" method="POST">

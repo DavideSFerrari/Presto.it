@@ -1,8 +1,8 @@
 <x-main>
-    <div class="container my-5">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8">
-            <form class="p-5 shadow rounded-4" action="{{route('register')}}" method="POST">
+    <div class="container ">
+        <div class="row justify-content-center ">
+          <div class="col-12 col-md-8 m-login-register">
+            <form class="p-5 shadow rounded-4 bg-white " action="{{route('register')}}" method="POST">
               @method('POST')
               @csrf
     
