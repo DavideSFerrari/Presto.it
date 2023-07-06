@@ -42,13 +42,13 @@
             </div>
         </section>
 
-            <section class="m-custom w-50">
+            <section class="m-custom w-50 detail-cont">
                 <h5 class="card-title text-uppercase">{{ $announcement->title }}</h5>
                 <p class="card-text mt-2 bg-primary w-50">{{ $announcement->category->name }}</p>
                 <hr>
                 <p class="card-text">Descrizione:{{ $announcement->description }}</p>
-                <p class="card-text">Dettaglio:{{ $announcement->detail }}</p>
-                <p class="card-text">Prezzo:{{ $announcement->price }}</p>
+                <p class="card-text">{{ $announcement->detail }}</p>
+                <p class="card-text">Prezzo: {{ $announcement->price }}€</p>
             </section>
         </div>
     </div>

@@ -74,6 +74,11 @@
     border: 5px double;    
 }
 
+.detail-cont {
+    border: 1px solid black;
+    padding: 5px;
+}
+
 
 
 .anim{
@@ -229,7 +234,7 @@ a{
     border-radius: 1rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
-    outline: 2px solid blue;
+    outline: 2px solid black;
 }
 
 .product-price small {
