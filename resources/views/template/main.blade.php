@@ -18,6 +18,10 @@
                 }
         </style>
     @vite(['resources/css/app.css','resources/js/app.js'])
+   
+  
+ 
+
     <title>Presto.it</title>
     @livewireStyles
 </head>
