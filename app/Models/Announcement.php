@@ -50,4 +50,8 @@ public function setAccepted($value){
 public static function toBeRevisionedCount(){
     return Announcement::where('is_accepted', NULL)->count();
 }
+
+public function images(){
+    return $this->hasMany(Image::class);
+}
 }

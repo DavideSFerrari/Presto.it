@@ -52,6 +52,13 @@
                                     @method('PATCH')
                                     <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
                                 </form>
+                                <form
+                                    action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
+                                    method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-danger shadow">Annulla revisione</button>
+                                </form>
 
                                 
                                 <!-- </div> -->
