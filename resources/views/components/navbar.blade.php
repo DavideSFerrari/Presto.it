@@ -28,7 +28,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link anim" href="{{ route('show') }}">Annunci</a>
+                    <a class="nav-link anim" href="{{ route('announcements.index') }}">Annunci</a>
                 </li>
 
                 <li class="nav-item">

@@ -19,9 +19,9 @@ use App\Http\Controllers\RevisorController;
 
 // Page
 Route::get('/', [PageController::class,'homepage'])->name('homepage');
-Route::get('/show', [PageController::class,'show'])->name('show');
 
 // Announcement
+Route::get('/announcement/homepage', [AnnouncementController::class,'index'])->name('announcements.index');
 Route::get('/create/announcement',[AnnouncementController::class,'createAnnouncement'])->name('announcements.create');
 Route::get('/detail/announcement/{announcement}', [AnnouncementController::class, 'detailAnnouncement'])->name('announcements.detail');
 Route::get('/category/{category}', [CategoryController::class, 'categoryShow'] )->name('categories.detail');

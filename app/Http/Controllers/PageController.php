@@ -14,12 +14,6 @@ class PageController extends Controller
         return view('homepage', compact('announcements'));
     }
 
-    public function show (Announcement $announcements){
-        
-        $announcements = Announcement::where('is_accepted',true)->get()->sortByDesc('created_at');;
-        return view('show', compact('announcements'));
-        
-    }
 
     public function setLanguage($lang){
       
