@@ -23,14 +23,19 @@ class ProviderController extends Controller
         $user = User::updateOrCreate([
             'provider_id' => $SocialUser->id,
             'provider' => $provider,
-        ], [
+            
+        ], 
+        [
             'name' => $SocialUser->name,
             'username' => $SocialUser->nickname,
             'email' => $SocialUser->email,
             'provider_token' => $SocialUser->token,
         ]);
+        
      
         Auth::login($user);
+
+        
      
         return redirect('/');
     }

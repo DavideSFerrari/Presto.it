@@ -34,6 +34,7 @@ class RevisorController extends Controller
             }
 
 
+
     public function becomeRevisor(){
    
     $obj = new BecomeRevisor(Auth::user());
