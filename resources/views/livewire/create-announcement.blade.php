@@ -1,5 +1,6 @@
 <div class="p-5 rounded-4 my-5 shadow bg-white">
-   <h1> Inserisci annuncio </h1>
+   <h1> Inserisci il tuo annuncio!</h1>
+   <br>
    
    @if (session()->has ('message'))
     <div class="flex flex row hustify-center my-2 alert alert-success">
@@ -44,8 +45,9 @@
             @endforeach
         </select>
     </div>
+    <br>
 <div class="mb-3">
-    <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
+    <input wire:model="temporary_images" type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
     @error('temporary_images.*')
         <p class="text-danger mt-2">{{$message}}</p>
     @enderror  

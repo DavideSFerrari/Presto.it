@@ -1,23 +1,15 @@
 <x-main>
-    <div class="container text-center">
+    <!-- <div class="container text-center">
         <div class="row">
             <div class="col-12 text-dark p-5">
-                <h1 class="display-2">Annuncio {{ $announcement->title }}</h1>
+                <h1 class="display-2">Dettaglio annuncio</h1>
             </div>
         </div>
-    </div>
-    <div class="container bg-white p-custom-2 ">
+    </div> -->
+    <div class="container bg-black p-custom-2 announcement-detail">
       <div class="d-flex">
         <section class="w-50">
             <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active ">
                         <img src="{{ url('/img/prova1.jpg') }}" class="d-block w-100 " alt="...">
@@ -42,12 +34,13 @@
             </div>
         </section>
 
-            <section class="m-custom w-50 detail-cont">
-                <h5 class="card-title text-uppercase">{{ $announcement->title }}</h5>
-                <p class="card-text mt-2 bg-primary w-50">{{ $announcement->category->name }}</p>
-                <hr>
-                <p class="card-text">Descrizione:{{ $announcement->description }}</p>
-                <p class="card-text">{{ $announcement->detail }}</p>
+            <section class="m-custom w-50 detail-container">
+            <p class="card-text mt-2 w-100">{{ $announcement->category->name }} - Pubblicato il: {{ $announcement->created_at->format('d/m/Y')}}</p>
+            <hr>
+                <h3 class="card-title text-uppercase">{{ $announcement->title }}</h5>
+                <br>
+                <p class="card-text">Descrizione: {{ $announcement->description }}</p>
+                <p class="card-text">Dettagli: {{ $announcement->detail }}</p>
                 <p class="card-text">Prezzo: {{ $announcement->price }}€</p>
             </section>
         </div>
