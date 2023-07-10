@@ -1,4 +1,4 @@
 <?php
 return [
-    'allAnnouncements'=>'Here are our announcements'
+    'allAnnouncements'=>'Here\'s all our announcements!'
 ];
