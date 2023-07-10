@@ -1,6 +1,6 @@
 <x-main>
 
-    <div class="container w-75 p-custom-2 announcement-detail">
+    <div class="container w-75 p-custom-2 announcement-showdetail">
         <div class="">
 
             <section class="w-75 m-auto">
@@ -29,10 +29,10 @@
                 </div>
             </section>
 
-            <section class="w-75 m-auto show-container">
-                <p class="card-text mt-2 w-100">{{ $announcement->category->name }} - Pubblicato il: {{ $announcement->created_at->format('d/m/Y')}}</p>
+            <section class="w-100 m-auto">
+                <p class="card-text mt-2 w-100 text-center">{{ $announcement->category->name }} - Pubblicato il: {{ $announcement->created_at->format('d/m/Y')}}</p>
                 <hr>
-                <h3 class="card-title text-uppercase">{{ $announcement->title }}</h5>
+                <h3 class="card-title text-uppercase text-center">{{ $announcement->title }}</h5>
                 <br>
                 <p class="card-text">Descrizione: {{ $announcement->description }}</p>
                 <p class="card-text">Dettagli: {{ $announcement->detail }}</p>

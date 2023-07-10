@@ -4,9 +4,9 @@
 /* /node_modules/flag-icons/css/flag-icons.min.css*/
 
 
-.announcement-detail {
+.announcement-showdetail {
     margin-top: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     border-radius: 5rem;
     background-image: linear-gradient(180deg, rgba(0%, 40%, 100%, 0.4), rgba(0%, 20%, 100%, 0.1));
 }
@@ -116,11 +116,6 @@
     transform: scaleX(1);
 }
 
-.show-container {
-    background-image: rgba(100%, 100%, 100%, 1.0);
-    padding: 10px;
-    height: auto;
-}
 
 .w-70{
     width: 70%;
