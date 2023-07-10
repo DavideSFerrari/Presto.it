@@ -28,7 +28,7 @@
             <input type="text" class="form-control">
         <br>
 
-            <a href="{{route('mail.become_revisor')}}" class="btn btn-primary shadow px-4 py-2">Invia il tuo curriculum vitae</a>
+            <a href="{{route('mail.become_revisor')}}" class="btn btn-primary shadow px-4 py-2">Invia la richiesta</a>
     
        </form>
     </div>
