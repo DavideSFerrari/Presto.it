@@ -10,6 +10,7 @@
         </div>
     </div>
 
+                            
     @if ($announcement_to_check)
         <div class="container">
         <div id="carouselExampleIndicators" class="carousel slide">

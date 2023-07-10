@@ -47,7 +47,7 @@
     </div>
     <br>
 <div class="mb-3">
-    <input wire:model="temporary_images" type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
+    <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
     @error('temporary_images.*')
         <p class="text-danger mt-2">{{$message}}</p>
     @enderror  
@@ -72,5 +72,5 @@
   
     <button type="submit" class="btn btn-primary shadow px-4 py-2">Crea</button>
 
-   </form>
+</form>
 </div>
