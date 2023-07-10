@@ -95,7 +95,7 @@ $this->cleanForm();
         $this->image = '';
         $this->images=[];
         $this->temporary_images=[];
-        $this->form_id = rand();
+      
     }
 
     public function render()
