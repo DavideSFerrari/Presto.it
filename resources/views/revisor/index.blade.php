@@ -14,6 +14,15 @@
     @if ($announcement_to_check)
         <div class="container">
         <div id="carouselExampleIndicators" class="carousel slide">
+            @if ($announcement_to_check->images)
+            <div class="carousel-inner">
+                @foreach ($announcement_to_check->images as $image)
+                    <div class="carousel-item @if($loop->first)active @endif">
+                        <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="">
+                    </div>
+                @endforeach
+            </div>
+            @endif
                 <div class="carousel-inner">
                     <div class="carousel-item active ">
                         <img src="{{ url('/img/prova1.jpg') }}" class="d-block w-100 " alt="...">
