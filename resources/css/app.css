@@ -2,7 +2,9 @@
 
 .announcement-detail {
     margin-top: 5rem;
+    margin-bottom: 2rem;
     border-radius: 5rem;
+    background-image: linear-gradient(180deg, rgba(0%, 40%, 100%, 0.4), rgba(0%, 20%, 100%, 0.1));
 }
 
 .btn-1 {

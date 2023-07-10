@@ -1,6 +1,6 @@
 <x-main>
 
-    <div class="container w-75 bg-black p-custom-2 announcement-detail">
+    <div class="container w-75 p-custom-2 announcement-detail">
         <div class="">
 
             <section class="w-75 m-auto">
