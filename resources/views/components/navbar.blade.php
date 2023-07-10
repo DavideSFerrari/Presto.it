@@ -31,9 +31,7 @@
                     <a class="nav-link anim" href="{{ route('announcements.index') }}">Annunci</a>
                 </li>
 
-                <li class="nav-item">
-                    <x-_locale lang="en" nation='gb' />
-                </li>
+                
 
 
 
@@ -97,7 +95,11 @@
             </ul>
         </div>
         <span class="fi fi-it">
-    </span>
+        </span>
+
+        <span class="fi fi-gr">
+        </span>
+
     
 
     </div>
