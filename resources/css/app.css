@@ -5,7 +5,10 @@
 
 
 .announcement-detail {
-    margin-top: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    border-radius: 5rem;
+    background-image: linear-gradient(180deg, rgba(0%, 40%, 100%, 0.4), rgba(0%, 20%, 100%, 0.1));
 }
 
 .btn-1 {
@@ -113,7 +116,7 @@
     transform: scaleX(1);
 }
 
-.detail-container {
+.show-container {
     background-image: linear-gradient(180deg, rgba(80%, 80%, 80%, 1.0), rgba(80%, 80%, 80%, 0.5));
     padding: 10px;
     height: auto;

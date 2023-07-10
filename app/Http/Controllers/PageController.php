@@ -22,6 +22,11 @@ class PageController extends Controller
     }
 
     
+    public function lavoraconoi() {
+        return view('lavoraconoi');
+    }
+
+    
 }
 
   
