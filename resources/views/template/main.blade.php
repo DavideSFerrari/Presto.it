@@ -36,6 +36,8 @@
         {{$slot}}
     </div>
 
+    
+
 
     <x-footer/>
     @livewireScripts
