@@ -1,4 +1,4 @@
-<x-main>
+
     <div>
         <h1>Un utente ha richiesto di lavorare con noi</h1>
         <h2>Ecco i suoi dati</h2>
@@ -8,7 +8,3 @@
         <a href="{{route('make.revisor',compact('user'))}}">Rendi revisore</a>
     </div>
     
-    
-    
-    
-    </x-main>

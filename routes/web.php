@@ -22,6 +22,7 @@ use App\Http\Controllers\Auth\ProviderController;
 // --- PAGE
 
 Route::get('/', [PageController::class,'homepage'])->name('homepage');
+Route::get('/homepage', [PageController::class,'lavoraconoi'])->name('lavoraconoi');
 
 // Cambio Lingua
 Route::post('/lingua/{lang}', [PageController::class, 'setLanguage'])->name('set_language_locale');
