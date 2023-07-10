@@ -19,7 +19,7 @@ class CreateAnnouncement extends Component
     public $detail;
     public $temporary_images;
     public $images= [];
-    
+    public $image;
     public $category;
 
     protected $rules =[
@@ -93,6 +93,9 @@ $this->cleanForm();
         $this->price = '';
         $this->detail = '';
         $this->image = '';
+        $this->images=[];
+        $this->temporary_images=[];
+        $this->form_id = rand();
     }
 
     public function render()
