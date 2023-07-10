@@ -306,3 +306,8 @@ a{
         border-left: 1px solid black;
         margin-left: 8px;
   } 
+  .img-preview {
+
+    width: 50%;
+    height: 50%;
+  }

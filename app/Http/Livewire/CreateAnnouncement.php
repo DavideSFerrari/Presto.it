@@ -12,14 +12,14 @@ class CreateAnnouncement extends Component
 {
     use WithFileUploads;
 
-
+    public $announcement;
     public $title;
     public $description;
     public $price;
     public $detail;
     public $temporary_images;
     public $images= [];
-    public $image;
+    
     public $category;
 
     protected $rules =[
@@ -65,24 +65,22 @@ public function removeImage($key)
 
     $this->validate();
     
-        $category = Category::find($this->category);
+    $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
+
+    if (count($this->images)){
+        foreach ($this->images as $image){
+            $this->announcement->images()->create(['path'=>$image->store('images','public')]);
+    }
+}
 
 
+$this->announcement->user()->associate(Auth::user());
+    $this->announcement->save();
 
-        
+session()->flash('message', 'Articolo inserito con successo');
 
-        $announcement = $category->announcements()->create([
-            'title'=>$this->title,
-            'description'=>$this->description,
-            'price'=>$this->price,
-            'detail'=>$this->detail,
-            'image'=>$this->image,
-            ]);
+$this->cleanForm();
 
-
-            Auth::user()->announcements()->save($announcement);
-            session()->flash('message', 'Annuncio inserito con successo');
-            $this->cleanForm();
     }
 
     public function updated($propertyName){
