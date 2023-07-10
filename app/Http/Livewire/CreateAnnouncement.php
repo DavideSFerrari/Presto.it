@@ -19,7 +19,6 @@ class CreateAnnouncement extends Component
     public $detail;
     public $temporary_images;
     public $images= [];
-    public $image;
     public $category;
 
     protected $rules =[
@@ -43,8 +42,9 @@ class CreateAnnouncement extends Component
         'images.max'=>'L\'immagine deve essere massimo di 1 mb',
     ];
 
-    public  function updateTemporaryImages()
+    public  function updatedTemporaryImages()
 {
+    
     if ($this->validate([
          'temporary_images.*'=>'image|max:1024',
     ])) {
@@ -77,7 +77,7 @@ public function removeImage($key)
 $this->announcement->user()->associate(Auth::user());
     $this->announcement->save();
 
-session()->flash('message', 'Articolo inserito con successo');
+session()->flash('message', 'Articolo inserito con successo, sarà pubblicato dopo la revisione');
 
 $this->cleanForm();
 
@@ -92,10 +92,9 @@ $this->cleanForm();
         $this->description = '';
         $this->price = '';
         $this->detail = '';
-        $this->image = '';
         $this->images=[];
         $this->temporary_images=[];
-        $this->form_id = rand();
+      
     }
 
     public function render()
