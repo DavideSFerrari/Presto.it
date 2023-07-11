@@ -16,7 +16,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle anim" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Categorie
+                        {{__('ui.categorie')}}
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
@@ -28,7 +28,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link anim" href="{{ route('announcements.index') }}">Annunci</a>
+                    <a class="nav-link anim" href="{{ route('announcements.index') }}">{{__('ui.annunci')}}</a>
                 </li>
 
                 
@@ -38,14 +38,12 @@
                 @if (Route::has('login'))
                     @auth
                         <div class="sezioneUtente">
-                            <a class="nav-link anim mx-2" href="#" class="my-2">Ciao {{ Auth::user()->name }}, cosa
-                                vuoi fare?</a>
+                            <a class="nav-link anim mx-2" href="#" class="my-2">Ciao {{ Auth::user()->name }}, {{__('ui.cosafai')}}</a>
                         </div>
                         <li class="nav-item">
                             @if (Route::has('login'))
                                 @auth
-                                    <a href="{{ route('announcements.create') }}" role="button" class="btn anim2 p-2 @if(request()->routeIs('announcements.create')) bg-black text-white @else '' @endif">Inserisci
-                                        annuncio</a>
+                                    <a href="{{ route('announcements.create') }}" role="button" class="btn anim2 p-2 @if(request()->routeIs('announcements.create')) bg-black text-white @else '' @endif">{{__('ui.insertAd')}}</a>
                                 @endauth
                             @endif
                         </li>
@@ -53,7 +51,7 @@
                         @if (Auth::user()->is_revisor)
                             <li class="nav-item">
                                 <a class="btn anim2 p-2 mx-2 position-relative @if(request()->routeIs('revisor.index')) bg-black text-white @else '' @endif" aria-current="page"
-                                href="{{ route('revisor.index') }}">Zona Revisore
+                                href="{{ route('revisor.index') }}">{{__('ui.revisione')}}
                                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     {{ App\Models\Announcement::toBeRevisionedCount() }}
                                         <span class="visually-hidden">Unread Message</span>
