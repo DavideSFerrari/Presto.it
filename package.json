@@ -13,11 +13,7 @@
     "dependencies": {
         "bootstrap": "5.3",
         "flag-icon-css": "^4.1.7",
-<<<<<<< HEAD
-        "flag-icons": "^6.7.0"
-=======
         "flag-icons": "^6.7.0",
         "flag-icons-svg": "^0.0.3"
->>>>>>> 60c899d948bfabb97a6ad2788edeb35a6a6307b2
     }
 }
