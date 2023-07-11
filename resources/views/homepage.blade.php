@@ -37,7 +37,7 @@
     
 
 
-    <h3 class="text-center my-5 fs-1">Annunci</h3>
+    <h3 class="text-center my-5 fs-1">{{__('ui.home')}}</h3>
 
     <div class="container my-5">
         <div class="row">
