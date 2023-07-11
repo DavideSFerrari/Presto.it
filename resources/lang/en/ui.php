@@ -1,6 +1,6 @@
 <?php
 return [
-    'allAnnouncements'=>'Here\'s all our announcements!',
+    'allAnnouncements'=>'All our announcements!',
     'create'=>'Insert your announcement!',
     'home'=>'Here are the latest announcements!',
     'cardhome'=> 'Add value to your life, start selling on Presto.it!',
@@ -8,9 +8,9 @@ return [
     'categorie'=>'Categories',
     'annunci'=>'Announcements',
     'cosafai'=>'what do you want to do?',
-    'insertAd'=>'Post Ad',
+    'insertAd'=>'Post Adv',
     'revisione'=>'Review area',
-    'titolo'=>'Ad title',
+    'titolo'=>'Adv title',
     'descrizione'=>'Description',
     'prezzo'=>'Price',
     'dettagli'=>'Details',
@@ -18,4 +18,10 @@ return [
     'file'=>'Choose files',
     'crea'=>'Create',
     'scegli'=>'Choose category',
+    'contatti'=>'Contacts',
+    'lavora'=>'Work with us',
+    'conNoi'=>'Do you want to work with us? Send here request!',
+    'nome'=> 'Name',
+    'cognome'=> 'Surname',
+    'inviaRichiesta'=>'Send Request',
 ];

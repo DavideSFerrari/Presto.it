@@ -3,8 +3,8 @@
 
     <ul class="nav col-md-4 justify-content-between">
       <li class="nav-item"><a href="{{route('homepage')}}" class="nav-link px-2 text-body-secondary footer-class">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary footer-class">Contatti</a></li>
-      <li class="nav-item"><a href="{{route('lavoraconoi')}}" class="nav-link px-2 text-body-secondary footer-class">Lavora con noi</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary footer-class">{{__('ui.contatti')}}</a></li>
+      <li class="nav-item"><a href="{{route('lavoraconoi')}}" class="nav-link px-2 text-body-secondary footer-class">{{__('ui.lavora')}}</a></li>
       <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary footer-class">FAQ</a></li>
     </ul>
   </footer>

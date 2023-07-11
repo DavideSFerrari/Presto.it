@@ -3,12 +3,12 @@
     <div class="">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center my-5 fs-1">Lavora con noi</h1>
+                <h1 class="text-center my-5 fs-1">{{__('ui.lavora')}}</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <p class="text-center my-5 fs-4">Vuoi lavorare con noi? Invia qui la richiesta!</p>
+                <p class="text-center my-5 fs-4">{{__('ui.conNoi')}}</p>
             </div>
         </div>
     </div>
@@ -16,11 +16,11 @@
     <form>
         @csrf
         <div class="mb-3">
-            <label for="name"> Nome</label>
+            <label for="name"> {{__('ui.nome')}}</label>
             <input type="text" class="form-control">   
         </div>
         <div class="mb-3">
-            <label for="surname"> Cognome</label>
+            <label for="surname"> {{__('ui.cognome')}}</label>
             <input type="text" class="form-control">   
         </div>
         <div class="mb-3">
@@ -28,7 +28,7 @@
             <input type="text" class="form-control">
         <br>
 
-            <a href="{{route('mail.become_revisor')}}" class="btn btn-primary shadow px-4 py-2">Invia la richiesta</a>
+            <a href="{{route('mail.become_revisor')}}" class="btn btn-primary shadow px-4 py-2">{{__('ui.inviaRichiesta')}}</a>
     
        </form>
     </div>
