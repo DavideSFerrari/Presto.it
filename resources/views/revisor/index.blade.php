@@ -21,9 +21,12 @@
                         <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="">
                     </div>
                 @endforeach
+
+
+
             </div>
             @endif
-                <div class="carousel-inner">
+                <!-- <div class="carousel-inner">
                     <div class="carousel-item active ">
                         <img src="{{ url('/img/prova1.jpg') }}" class="d-block w-100 " alt="...">
                     </div>
@@ -42,10 +45,11 @@
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
-                    </button>
+                    </button> 
+                </div> -->
 
 
-                </div>
+
                 <div class="revisor-container">
                     <h1>{{ $announcement_to_check->title }}</h1>
                     <p>{{ $announcement_to_check->description }}</p>
