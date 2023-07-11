@@ -11,35 +11,35 @@
    <form wire:submit.prevent="store">
     @csrf
     <div class="mb-3">
-        <label for="title"> Titolo Annuncio</label>
+        <label for="title"> {{__('ui.titolo')}}</label>
         <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
         @error('title')
             {{$message}}
         @enderror    
     </div>
     <div class="mb-3">
-        <label for="description"> Descrizione</label>
+        <label for="description"> {{__('ui.descrizione')}}</label>
         <textarea wire:model="description" type="text" class="form-control @error('description') is-invalid @enderror"></textarea>
         @error('description')
             {{$message}}
         @enderror
     </div>
     <div class="mb-3">
-        <label for="price"> Prezzo </label>
+        <label for="price"> {{__('ui.prezzo')}} </label>
         <input wire:model="price" type="float" class="form-control @error('price') is-invalid @enderror">
         @error('price')
             {{$message}}
         @enderror
     </div>
     <div class="mb-3">
-        <label for="detail"> Dettagli </label>
+        <label for="detail"> {{__('ui.dettagli')}} </label>
         <input wire:model="detail" type="text" class="form-control">
     </div>
 
     <div>
-    <label for="category">Categoria</label>
+    <label for="category">{{__('ui.categoria')}}</label>
     <select class="form-control" id="category" wire:model="category">
-        <option selected>Scegli categoria</option>
+        <option selected>{{__('ui.scegli')}}</option>
             @foreach ($categories as $category)
             <option value="{{$category->id}}">{{$category->name}}</option>
             @endforeach
@@ -70,7 +70,7 @@
 </div>    
 @endif    
   
-    <button type="submit" class="btn btn-primary shadow px-4 py-2">Crea</button>
+    <button type="submit" class="btn btn-primary shadow px-4 py-2">{{__('ui.crea')}}</button>
 
 </form>
 </div>

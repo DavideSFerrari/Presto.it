@@ -1,6 +1,27 @@
 <?php
 return [
-    'allAnnouncements'=>'Ecco i nostri annunci!',
+    'allAnnouncements'=>'Tutti gli annunci!',
     'create'=>'Inserisci il tuo annuncio!',
-    'home'=>'Ecco gli ultimi annunci!'
+    'home'=>'Ecco gli ultimi annunci!',
+    'cardhome'=> 'Dai un valore aggiunto alla tua vita, inizia a vendere su Presto.it!',
+    'vendisubito'=>'Vendi subito',
+    'categorie'=>'Categorie',
+    'annunci'=>'Annunci',
+    'cosafai'=>'cosa vuoi fare?',
+    'insertAd'=>'Inserisci annuncio',
+    'revisione'=>'Zona revisione',
+    'titolo'=>'Titolo annuncio',
+    'descrizione'=>'Descrizione',
+    'prezzo'=>'Prezzo',
+    'dettagli'=>'Dettagli',
+    'categoria'=>'Categoria',
+    'file'=>'Scegli file',
+    'crea'=>'Crea',
+    'scegli'=>'Scegli categoria',
+    'contatti'=>'Contatti',
+    'lavora'=>'Lavora con noi',
+    'conNoi'=>'Vuoi lavorare con noi? Invia qui la richiesta!',
+    'nome'=> 'Nome',
+    'cognome'=> 'Cognome',
+    'inviaRichiesta'=>'Invia la richiesta'
 ];
