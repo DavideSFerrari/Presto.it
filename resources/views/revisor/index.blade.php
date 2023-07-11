@@ -25,8 +25,6 @@
                 @endif
 
 
-
-
                 <div class="revisor-container">
                     <h1>{{ $announcement_to_check->title }}</h1>
                     <p>{{ $announcement_to_check->description }}</p>
