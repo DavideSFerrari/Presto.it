@@ -74,7 +74,7 @@ public function removeImage($key)
         foreach ($this->images as $image){
             //$this->announcement->images()->create(['path'=>$image->store('images','public')]);
             $newFileName = "announcements/{$this->announcement->id}";
-            $newImage = $this->announcement->images()->create(['path'=>$image->store('$newFileName','public')]);
+            $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
             dispatch(new ResizeImage($newImage->path , 300 , 400));
         }
 
