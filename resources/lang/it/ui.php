@@ -10,4 +10,12 @@ return [
     'cosafai'=>'cosa vuoi fare?',
     'insertAd'=>'Inserisci annuncio',
     'revisione'=>'Zona revisione',
+    'titolo'=>'Titolo annuncio',
+    'descrizione'=>'Descrizione',
+    'prezzo'=>'Prezzo',
+    'dettagli'=>'Dettagli',
+    'categoria'=>'Categoria',
+    'file'=>'Scegli file',
+    'crea'=>'Crea',
+    'scegli'=>'Scegli categoria',
 ];

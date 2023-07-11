@@ -10,5 +10,13 @@ return [
     'cosafai'=>'¿qué es lo que quieres hacer?',
     'insertAd'=>'Publicar anuncio',
     'revisione'=>'Área de revisión',
+    'titolo'=>'Título del anuncio',
+    'descrizione'=>'Descripción',
+    'prezzo'=>'Precio',
+    'dettagli'=>'Detalles',
+    'categoria'=>'Categoría',
+    'file'=>'Seleccionar archivos',
+    'crea'=>'Crear',
+    'scegli'=>'Elegir la categoría',
 ];
 
