@@ -94,14 +94,20 @@
 	                        <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
 
-
-                <li class="nav-item">
-                    <x-_locale lang='it' nation='it'/>
-                </li>
-                <li class="nav-item">
-                    <x-_locale lang='en' nation='gb'/>
-                </li>
             </ul>
         </div>
+        <li class="nav-item">
+            <x-_locale lang='it' nation='it'/>
+        </li>
+        <li class="nav-item">
+            <x-_locale lang='en' nation='gb'/>
+        </li>
+        <li class="nav-item">
+            <x-_locale lang='es' nation='es'/>
+        </li>
+
+
+    
+
     </div>
 </nav>

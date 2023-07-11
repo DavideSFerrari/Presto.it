@@ -1,5 +1,5 @@
 <div class="p-5 rounded-4 my-5 shadow bg-white">
-   <h1> Inserisci il tuo annuncio!</h1>
+   <h1>{{__('ui.create')}}</h1>
    <br>
    
    @if (session()->has ('message'))
