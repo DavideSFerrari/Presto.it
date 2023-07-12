@@ -23,5 +23,13 @@ return [
     'conNoi'=>'Vuoi lavorare con noi? Invia qui la richiesta!',
     'nome'=> 'Nome',
     'cognome'=> 'Cognome',
-    'inviaRichiesta'=>'Invia la richiesta'
+    'inviaRichiesta'=>'Invia la richiesta',
+    'email'=>'Email utente',
+    'accedi'=>'Accedi',
+    'noregister'=>'Non sei registrato?',
+    'confermaPassw'=>'Conferma Password',
+    'registrati'=>'Registrati',
+    'giaIscritto'=>'Già iscritto?',
+    'cerca'=>'Cerca',
+
 ];

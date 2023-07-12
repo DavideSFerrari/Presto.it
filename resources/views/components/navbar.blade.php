@@ -88,8 +88,8 @@
 
 
                         <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-	                        <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-	                        <button class="btn btn-outline-success" type="submit">Search</button>
+	                        <input name="searched" class="form-control me-2" type="search" placeholder="" aria-label="Search">
+	                        <button class="btn btn-outline-success" type="submit">{{__('ui.cerca')}}</button>
                         </form>
 
             </ul>
