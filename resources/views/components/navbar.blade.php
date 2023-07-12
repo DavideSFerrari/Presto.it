@@ -95,20 +95,27 @@
                 @else
                     <li class="nav-item">
                         <a class="nav-link anim" href="{{ route('login') }}"
-                            class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 ">Login</a>
+                            class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 ">{{__('ui.accedi')}}</a>
                     </li>
 
 
                         @if (Route::has('register'))
                             <li class="nav-item"><a class="nav-link anim" href="{{ route('register') }}"
-                                class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                                class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">{{__('ui.registrati')}}</a>
                             </li>
                         @endif
                     @endauth
                 @endif
 
 
+<<<<<<< HEAD
                         
+=======
+                        <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+	                        <input name="searched" class="form-control me-2" type="search" placeholder="" aria-label="Search">
+	                        <button class="btn btn-outline-success" type="submit">{{__('ui.cerca')}}</button>
+                        </form>
+>>>>>>> 626fca7b3db37a1f0e88575b839b7922ba2b0d15
 
                         <li class="nav-item">
             <x-_locale lang='it' nation='it'/>

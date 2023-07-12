@@ -19,7 +19,7 @@
     
     
               <div class="mb-3">
-                <label for="email" class="form-label">Email utente</label>
+                <label for="email" class="form-label">{{__('ui.email')}}</label>
                 <input type="email" name="email" class="form-control" id="email" required value="{{old('email')}}">
               </div>
               <div class="mb-3">
@@ -27,8 +27,8 @@
                 <input type="password" name="password" class="form-control" id="password" required>
               </div>
     
-              <button type="submit" class="btn btn-dark">Accedi</button>
-              <a href="{{route('register')}}" class="btn btn-outline-dark">Non sei registrato?</a>
+              <button type="submit" class="btn btn-dark">{{__('ui.accedi')}}</button>
+              <a href="{{route('register')}}" class="btn btn-outline-dark">{{__('ui.noregister')}}</a>
 
               <div>
                 <a href="/auth/google/redirect" class="btn btn-outline-dark my-1">

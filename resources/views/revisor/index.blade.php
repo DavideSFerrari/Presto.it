@@ -19,7 +19,7 @@
                         <div class="carousel-inner">
                             @foreach ($announcement_to_check->images as $image)
                             <div class="carousel-item @if($loop->first)active @endif">
-                                <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="">
+                                <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="" style="display: block; margin: auto;">
                             </div>
                             @endforeach
                         </div>
@@ -30,10 +30,10 @@
                                 <img src="https://picsum.photos/400/350" class="img-fluid p-3 rounded" alt="..." style="display: block; margin: auto;">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/400/350" class="img-fluid p-3 rounded" alt="...">
+                                <img src="https://picsum.photos/400/350" class="img-fluid p-3 rounded" alt="..." style="display: block; margin: auto;">
                             </div>
                             <div class="carousel-item ">
-                                <img src="https://picsum.photos/400/350" class="img-fluid p-3 rounded" alt="...">
+                                <img src="https://picsum.photos/400/350" class="img-fluid p-3 rounded" alt="..." style="display: block; margin: auto;">
                             </div>
 
                         </div>
@@ -85,5 +85,15 @@
             
 
     @endif
+
+    @if (Auth::user()->last_announcement_revised)
+    <div class="d-flex justify-content-center m-5 pt-5">
+        <form action="{{ route('revisor.restore_announcement', ['announcement' => Auth::user()->last_announcement_revised]) }}" method="POST">
+            @csrf
+            @method('PATCH')
+            <button type="submit" class="btn btn-presto rounded-4">Cambiato idea? Rivaluta annuncio precedente</button>
+        </form>
+    </div>
+@endif
 
 </x-main>
