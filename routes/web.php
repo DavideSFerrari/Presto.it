@@ -42,7 +42,7 @@ Route::get('/category/{category}', [CategoryController::class, 'categoryShow'] )
 Route::get('/revisor/homepage', [RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class,'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accepted_announcement');
 Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class,'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
-
+Route::patch('/recupera/annuncio/{announcement}', [RevisorController::class, 'restoreAd'])->middleware('isRevisor')->name('revisor.restore_announcement');
 
 // Richiedi di diventare revisore
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('mail.become_revisor');

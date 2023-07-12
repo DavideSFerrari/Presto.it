@@ -86,4 +86,14 @@
 
     @endif
 
+    @if (Auth::user()->last_announcement_revised)
+    <div class="d-flex justify-content-center m-5 pt-5">
+        <form action="{{ route('revisor.restore_announcement', ['announcement' => Auth::user()->last_announcement_revised]) }}" method="POST">
+            @csrf
+            @method('PATCH')
+            <button type="submit" class="btn btn-presto rounded-4">Cambiato idea? Rivaluta annuncio precedente</button>
+        </form>
+    </div>
+@endif
+
 </x-main>
