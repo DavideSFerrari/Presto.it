@@ -16,13 +16,13 @@
                     @else
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ url('/img/prova1.jpg') }}" class="d-block w-100 " alt="...">
+                            <img src="{{ url('/img/prova1.jpg') }}" class="d-block w-100 " alt="..." style="display: block; margin: auto;">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ url('/img/prova2.jpg') }}" class="d-block  w-100 " alt="...">
+                            <img src="{{ url('/img/prova2.jpg') }}" class="d-block  w-100 " alt="..." style="display: block; margin: auto;">
                         </div>
                         <div class="carousel-item ">
-                            <img src="{{ url('/img/gatto3.jpg') }}" class="d-block  w-100 " alt="...">
+                            <img src="{{ url('/img/gatto3.jpg') }}" class="d-block  w-100 " alt="..." style="display: block; margin: auto;">
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                             data-bs-slide="prev">
