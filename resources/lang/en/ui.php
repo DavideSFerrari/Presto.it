@@ -31,4 +31,5 @@ return [
     'registrati'=>'Register',
     'giaIscritto'=>'Already a member?',
     'cerca'=>'Search',
+    'annulla'=>'Cancel last operation',
 ];

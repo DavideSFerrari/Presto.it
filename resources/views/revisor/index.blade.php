@@ -91,7 +91,7 @@
         <form action="{{ route('revisor.restore_announcement', ['announcement' => Auth::user()->last_announcement_revised]) }}" method="POST">
             @csrf
             @method('PATCH')
-            <button type="submit" class="btn btn-presto rounded-4">Cambiato idea? Rivaluta annuncio precedente</button>
+            <button type="submit" class="btn btn-presto rounded-4">{{__('ui.annulla')}}</button>
         </form>
     </div>
 @endif
