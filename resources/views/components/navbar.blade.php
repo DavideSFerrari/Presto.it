@@ -92,11 +92,7 @@
 	                        <button class="btn btn-outline-success" type="submit">{{__('ui.cerca')}}</button>
                         </form>
 
-            </ul>
-        </div>
-       
-        
-        <li class="nav-item">
+                        <li class="nav-item">
             <x-_locale lang='it' nation='it'/>
         </li>
         <li class="nav-item">
@@ -105,6 +101,9 @@
         <li class="nav-item">
             <x-_locale lang='es' nation='es'/>
         </li>
+        
+            </ul>
+        </div>
        
 
 
