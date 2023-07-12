@@ -19,7 +19,7 @@
                         <div class="carousel-inner">
                             @foreach ($announcement_to_check->images as $image)
                             <div class="carousel-item @if($loop->first)active @endif">
-                                <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="">
+                                <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="" style="display: block; margin: auto;">
                             </div>
                             @endforeach
                         </div>
@@ -30,10 +30,10 @@
                                 <img src="https://picsum.photos/400/350" class="img-fluid p-3 rounded" alt="..." style="display: block; margin: auto;">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/400/350" class="img-fluid p-3 rounded" alt="...">
+                                <img src="https://picsum.photos/400/350" class="img-fluid p-3 rounded" alt="..." style="display: block; margin: auto;">
                             </div>
                             <div class="carousel-item ">
-                                <img src="https://picsum.photos/400/350" class="img-fluid p-3 rounded" alt="...">
+                                <img src="https://picsum.photos/400/350" class="img-fluid p-3 rounded" alt="..." style="display: block; margin: auto;">
                             </div>
 
                         </div>
