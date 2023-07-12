@@ -10,30 +10,51 @@
             <a class="navbar-brand anim" href="{{ route('homepage') }}">Presto.it</a>
         </div>
 
+
+
         <div class="">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle anim" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        {{__('ui.categorie')}}
-                    </a>
-                    <ul class="dropdown-menu">
-                        @foreach ($categories as $category)
-                            <li><a class="dropdown-item"
-                                    href="{{ route('categories.detail', compact('category')) }}">{{ $category->name }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </li>
+
+                <div class="m-custom-3"> 
+                    <div class="row">
+                        <div class="input-group">
+                            <div class="input-group-btn search-panel">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            {{__('ui.categorie')}}
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            @foreach ($categories as $category)
+                                                <li><a class="dropdown-item"
+                                                        href="{{ route('categories.detail', compact('category')) }}">{{ $category->name }}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                            </div>
+                            <input type="hidden" name="search_param" value="all" id="search_param">         
+                            <input type="text" class="form-control rounded-5" name="x" placeholder="Ricerca ...">
+                            <span class="input-group-btn">
+                                <form action="{{route('announcements.search')}}" method="GET">
+                                    <button class="btn btn-default" type="submit">
+                                        <span class="">
+                                            <i class="bi bi-search">             
+                                            </i>
+                                        </span>
+                                    </button>
+                                </form>
+                            </span>
+                        </div>
+                    </div>
+                </div>
                 
                 <li class="nav-item">
                     <a class="nav-link anim" href="{{ route('announcements.index') }}">{{__('ui.annunci')}}</a>
                 </li>
-
-                
-
-
 
                 @if (Route::has('login'))
                     @auth
@@ -87,10 +108,7 @@
                 @endif
 
 
-                        <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-	                        <input name="searched" class="form-control me-2" type="search" placeholder="" aria-label="Search">
-	                        <button class="btn btn-outline-success" type="submit">{{__('ui.cerca')}}</button>
-                        </form>
+                        
 
                         <li class="nav-item">
             <x-_locale lang='it' nation='it'/>
