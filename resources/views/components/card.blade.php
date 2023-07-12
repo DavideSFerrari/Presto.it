@@ -4,7 +4,7 @@
         @foreach ($announcements as $announcement)
             <div class=" m-3 product-card rounded-3 card-custom shadow" style="width: 18rem;">
                 <a class="text-custom text-break" href="{{ route('announcements.detail', $announcement) }}">
-                <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'http://picsum.photos/200'}}" class="card-img-top my-3 rounded-3" alt="...">
+                <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,400) : 'http://picsum.photos/200'}}" class="card-img-top my-3 rounded-3" alt="...">
                 <div class="product-details">
                     <h5 class="card-title text-break">{{ $announcement->title }}</h5>
                     <br>
