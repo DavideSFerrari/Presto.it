@@ -9,11 +9,11 @@
                         <div class="carousel-inner">
                             @foreach ($announcement->images as $image)
                                 <div class="carousel-item @if($loop->first)active @endif">
-                                <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="">
+                                <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,400) : 'http://picsum.photos/200'}}" class="img-fluid p-3 rounded" alt="">
                                 </div>
                              @endforeach
                         </div>
-                @endif
+                    @endif
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="{{ url('/img/prova1.jpg') }}" class="d-block w-100 " alt="...">
