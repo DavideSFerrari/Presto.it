@@ -24,5 +24,12 @@ return [
     'nome'=> 'Nombre',
     'cognome'=> 'Apellido',
     'inviaRichiesta'=>'Enviar Consulta',
+    'email'=>'Email',
+    'accedi'=>'Identificate',
+    'noregister'=>'Necesitas registrarte?',
+    'confermaPassw'=>'Confirmar contraseña',
+    'registrati'=>'Regístrate',
+    'giaIscritto'=>'¿Ya está registrado?',
+    'cerca'=>'Busca',
 ];
 
