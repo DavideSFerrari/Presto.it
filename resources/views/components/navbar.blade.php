@@ -108,14 +108,7 @@
                 @endif
 
 
-<<<<<<< HEAD
                         
-=======
-                        <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-	                        <input name="searched" class="form-control me-2" type="search" placeholder="" aria-label="Search">
-	                        <button class="btn btn-outline-success" type="submit">{{__('ui.cerca')}}</button>
-                        </form>
->>>>>>> 626fca7b3db37a1f0e88575b839b7922ba2b0d15
 
                         <li class="nav-item">
             <x-_locale lang='it' nation='it'/>
