@@ -6,10 +6,13 @@
             <section class="w-75 m-auto">
                 <div id="carouselExampleIndicators" class="carousel slide">
                     @if ($announcement->images->isNotEmpty())
-                        <div class="carousel-inner">
-                            @foreach ($announcement->images as $image)
+                    <div class="carousel-inner">
+                        @foreach ($announcement->images as $image)
                                 <div class="carousel-item @if($loop->first)active @endif">
-                                <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,400) : 'http://picsum.photos/200'}}" class="img-fluid p-3 rounded" alt="" style="display: block; margin: auto;">
+                                    <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,400) : 'http://picsum.photos/200'}}" class="img-fluid p-3 rounded" alt="" style="display: block; margin: auto;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,400) : 'http://picsum.photos/200'}}" class="img-fluid p-3 rounded" alt="" style="display: block; margin: auto;">
                                 </div>
                              @endforeach
                         </div>
