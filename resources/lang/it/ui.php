@@ -31,5 +31,6 @@ return [
     'registrati'=>'Registrati',
     'giaIscritto'=>'Già iscritto?',
     'cerca'=>'Cerca',
+    'annulla'=>'Annulla ultima operazione',
 
 ];
