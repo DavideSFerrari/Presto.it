@@ -32,4 +32,6 @@ return [
     'giaIscritto'=>'Already a member?',
     'cerca'=>'Search',
     'annulla'=>'Cancel last operation',
+    'accetta'=>'Accept',
+    'rifiuta'=>'Decline',
 ];

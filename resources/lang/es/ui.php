@@ -32,5 +32,7 @@ return [
     'giaIscritto'=>'¿Ya está registrado?',
     'cerca'=>'Busca',
     'annulla'=>'Deshacer la última operación',
+    'accetta'=>'Aceptar',
+    'rifiuta'=>'Rechazar',
 ];
 
