@@ -38,7 +38,6 @@
                             </div>
 
                         <form action="{{route('announcements.search')}}" method="GET" role="search">
-                            @csrf
                             <input type="search" class="form-control rounded-5" name="x" placeholder="Ricerca ...">
                         </form>
 
