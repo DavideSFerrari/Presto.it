@@ -52,6 +52,7 @@ class CreateAnnouncement extends Component
          'temporary_images.*'=>'image|max:1024',
     ])) {
         foreach ($this->temporary_images as $image){
+            
             $this->images[]= $image;
         }
     }
@@ -76,6 +77,7 @@ public function removeImage($key)
             $newFileName = "announcements/{$this->announcement->id}";
             $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
             dispatch(new ResizeImage($newImage->path , 300 , 400));
+            
         }
 
         File::deleteDirectory(storage_path('/app/livewire-tmp'));
