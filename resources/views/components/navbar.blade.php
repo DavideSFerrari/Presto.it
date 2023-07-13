@@ -36,18 +36,21 @@
                                         </ul>
                                     </li>
                             </div>
-                            <input type="hidden" name="search_param" value="all" id="search_param">         
-                            <input type="text" class="form-control rounded-5" name="x" placeholder="Ricerca ...">
-                            <span class="input-group-btn">
-                                <form action="{{route('announcements.search')}}" method="GET">
+
+                        <form action="{{route('announcements.search')}}" method="GET" role="search">
+                            
+                        </form>
+
+                            
+                                <form action="{{route('announcements.search')}}" method="GET" role="search" class="">   
+                                    <input type="search" class="form-control rounded-5" name="searched" placeholder="Ricerca ..." style="display: inline !important; width: 80% !important;">   
+                                    <span class="input-group-btn">  
                                     <button class="btn btn-default" type="submit">
-                                        <span class="">
-                                            <i class="bi bi-search">             
-                                            </i>
-                                        </span>
+                                            <i class="bi bi-search"></i>
                                     </button>
+                                </span>
                                 </form>
-                            </span>
+                            
                         </div>
                     </div>
                 </div>
