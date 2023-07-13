@@ -38,16 +38,19 @@
                             </div>
 
                         <form action="{{route('announcements.search')}}" method="GET" role="search">
-                            <input type="search" class="form-control rounded-5" name="x" placeholder="Ricerca ...">
+                            
                         </form>
 
-                            <span class="input-group-btn">
-                                <form action="{{route('announcements.search')}}" method="GET" role="search">        
+                            
+                                <form action="{{route('announcements.search')}}" method="GET" role="search" class="">   
+                                    <input type="search" class="form-control rounded-5" name="searched" placeholder="Ricerca ..." style="display: inline !important; width: 80% !important;">   
+                                    <span class="input-group-btn">  
                                     <button class="btn btn-default" type="submit">
                                             <i class="bi bi-search"></i>
                                     </button>
+                                </span>
                                 </form>
-                            </span>
+                            
                         </div>
                     </div>
                 </div>
