@@ -70,6 +70,6 @@
 </div>    
 @endif    
     <hr class="mt-5">
-    <button type="submit" class="btn btn-primary shadow px-4 py-2" style="display: block; margin: auto; width: 25%;">{{__('ui.crea')}}</button>
+    <button type="submit" class="btn btn-primary shadow px-4 py-2" style="display: block; margin: auto; width: 25%;">{{__('ui.cancella')}}</button>
 </form>
 </div>

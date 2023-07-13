@@ -36,4 +36,5 @@ return [
     'rifiuta'=>'Decline',
     'saluto'=>'Hello,',
     'homepage'=>'Back to homepage',
+    'cancella'=>'Delete',
 ];
