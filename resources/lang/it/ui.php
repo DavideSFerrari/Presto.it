@@ -32,5 +32,7 @@ return [
     'giaIscritto'=>'Già iscritto?',
     'cerca'=>'Cerca',
     'annulla'=>'Annulla ultima operazione',
+    'accetta'=>'Accetta',
+    'rifiuta'=>'Rifiuta',
 
 ];

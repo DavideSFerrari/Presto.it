@@ -67,14 +67,14 @@
                             <form action="{{ route('revisor.accepted_announcement', ['announcement' => $announcement_to_check]) }}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-success shadow">Accetta</button>
+                                <button type="submit" class="btn btn-success shadow">{{__('ui.accetta')}}</button>
                             </form>
         
                                 <!-- <div class="col-6 col-md-3 text end"> -->
                             <form action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                                <button type="submit" class="btn btn-danger shadow">{{__('ui.rifiuta')}}</button>
                             </form>
                                                                
                                 <!-- </div> -->
