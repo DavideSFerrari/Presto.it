@@ -34,5 +34,6 @@ return [
     'annulla'=>'Deshacer la última operación',
     'accetta'=>'Aceptar',
     'rifiuta'=>'Rechazar',
+    'saluto'=>'Hola,',
 ];
 
