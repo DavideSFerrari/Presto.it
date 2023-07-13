@@ -4,7 +4,7 @@
         
 
             
-                <div id="carouselExampleIndicators" class="carousel slide bg-black">
+                <div id="carouselExampleIndicators" class="carousel slide">
                     @if ($announcement->images->isNotEmpty())
                     <div class="carousel-inner">
                         @foreach ($announcement->images as $image)

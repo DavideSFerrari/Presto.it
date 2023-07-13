@@ -277,7 +277,7 @@ a{
 }
 
 .revisor-container {
-    background-image: linear-gradient(180deg, rgba(0%, 40%, 100%, 0.4), rgba(0%, 20%, 100%, 0.1));
+    background-color: rgba(100%, 100%, 100%, 1.0);
     padding: 10px;
 }
 
