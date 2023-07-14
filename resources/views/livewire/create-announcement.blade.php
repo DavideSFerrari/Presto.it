@@ -62,7 +62,7 @@
             @foreach ($images as $key => $image)
             <div class="col my-3">
                 <div class="img-preview m-auto p-0 shadow rounded" style="background-image: url({{$image->temporaryUrl()}}); background-position: center; background-size: cover;"></div>
-                <button type="button" class="btn btn-danger shadow d-block text-center mt-4 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                <button type="button" class="btn btn-danger shadow d-block text-center mt-4 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.cancella')}}</button>
             </div>              
             @endforeach
         </div>
@@ -70,6 +70,6 @@
 </div>    
 @endif    
     <hr class="mt-5">
-    <button type="submit" class="btn btn-primary shadow px-4 py-2" style="display: block; margin: auto; width: 25%;">{{__('ui.cancella')}}</button>
+    <button type="submit" class="btn btn-primary shadow px-4 py-2" style="display: block; margin: auto; width: 25%;">{{__('ui.crea')}}</button>
 </form>
 </div>
