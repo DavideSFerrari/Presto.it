@@ -287,6 +287,10 @@ a{
     padding: 10px;
 }
 
+.card-title {
+    text-align: center;
+}
+
 .card-custom {
     transition: transform 250ms, opacity 400ms;
   }
