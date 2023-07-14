@@ -7,6 +7,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\RevisorController;
 use Laravel\Socialite\Contracts\Provider;
 use App\Http\Controllers\Auth\ProviderController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
