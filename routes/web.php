@@ -59,3 +59,7 @@ Route::get('/ricerca/annuncio', [RevisorController::class, 'searchAnnouncements'
 Route::get('/auth/{provider}/redirect', [ProviderController::class, 'redirect']);
 Route::get('/auth/{provider}/callback', [ProviderController::class, 'callback']);
 
+//AREA USER PROFILE
+Route::get('/profilo', [UserController::class, 'index'])->name('user_profile.index');
+Route::get('/profilo/edit', [UserController::class, 'edit'])->name('user_profile.edit');
+Route::delete('/profilo/elimina', [UserController::class, 'destroy'])->name('user_profile.destroy');

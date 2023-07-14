@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Announcement;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,25 +15,25 @@ class UserController extends Controller
            
             $categories = Category::all();
             if(Auth::user()){
-                $advs = Adv::where('user_id', Auth::user()->id)->get();
-                // dd($advs);
+                $announcements = Announcement::where('user_id', Auth::user()->id)->get();
+                
     
             }
     
     
-            return view('user_profile.index', compact('categories', 'advs'));
+            return view('user_profile.index', compact('categories', 'announcements'));
     
         }
     
         public function edit(){
-            $advs = Adv::all();
+            $announcements = Announcement::all();
             $categories = Category::all();
-            return view('user_profile.edit', compact('advs', 'categories', ));
+            return view('user_profile.edit', compact('announcements', 'categories', ));
         }
     
         public function destroy(User $user){
             $user = Auth::user();
             $user->delete();
-            return redirect()->route('welcome')->with('success', 'Cancellazione account avvenuta');
+            return redirect()->route('homepage')->with('success', 'Cancellazione account avvenuta');
         }
 }
