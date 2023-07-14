@@ -35,6 +35,8 @@ return [
     'accetta'=>'Accetta',
     'rifiuta'=>'Rifiuta',
     'saluto'=>'Ciao,',
+    'homepage'=>'Torna nella homepage',
+    'cancella'=>'Cancella',
 
 
 ];

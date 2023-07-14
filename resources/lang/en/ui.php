@@ -35,4 +35,6 @@ return [
     'accetta'=>'Accept',
     'rifiuta'=>'Decline',
     'saluto'=>'Hello,',
+    'homepage'=>'Back to homepage',
+    'cancella'=>'Delete',
 ];

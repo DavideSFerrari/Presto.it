@@ -320,3 +320,13 @@ a{
     height: 780px;
        
   }
+
+ .bg-revisor{
+    color: #fff;
+    background: #0f7aaf;
+    opacity: 0.4;
+ }
+
+ .h-revisor{
+    color: white;
+ }

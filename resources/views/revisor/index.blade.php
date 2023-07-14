@@ -1,9 +1,9 @@
 <x-main>
 
-    <div class="container-fluid p-5 bg-gradient bg-success p-5 shadow mb-4">
+    <div class="container-fluid p-5 bg-gradient bg-revisor p-5 shadow mb-4">
         <div class="row">
-            <div class="col-12 text-light p-5">
-                <h1 class="display-2 text-center">
+            <div class="col-12 p-5">
+                <h1 class="display-2 text-center h-revisor">
                     {{$announcement_to_check ? 'Annunci da revisionare' : 'Non ci sono annunci da revisionare'}}
                 </h1>
             </div>
@@ -91,9 +91,13 @@
         <form action="{{ route('revisor.restore_announcement', ['announcement' => Auth::user()->last_announcement_revised]) }}" method="POST">
             @csrf
             @method('PATCH')
-            <button type="submit" class="btn btn-presto rounded-4">{{__('ui.annulla')}}</button>
+            <button type="submit" class="btn btn-presto btn btn-outline-danger btn-lg">{{__('ui.annulla')}}</button>
         </form>
     </div>
 @endif
+
+<div class="d-flex justify-content-center m-5 pt-5 ">
+<button onclick="window.location.href='{{ route('homepage') }}'" class=" btn btn-outline-success btn-lg">{{__('ui.homepage')}}</button>
+</div>
 
 </x-main>
