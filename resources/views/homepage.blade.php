@@ -1,14 +1,14 @@
 <x-main>
 
-  <div class="my-5 ">
+  <div class="my-5 margin-left-right">
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active ">
-                <img src="{{ url('/img/prova1.jpg') }}" class="d-block img w-100" alt="...">
+                <img src="{{ url('/img/prova1.jpg') }}" class="d-block  img w-100" alt="...">
                 <div class="container">
                 <div class="row"> 
                 <div class="carousel-caption d-none d-md-block  top-15 ">
-                    <div class="hero-block__wrapper position-relative div-custom shadow h-50">
+                    <div class="hero-block__wrapper position-relative div-custom shadow h-50" style="background: linear-gradient(0deg, rgba(202,223,246,1) 0%, rgba(220,222,252,1) 100%);">
                         <div class="position-absolute m-4">
                             <h2 class="text-dark">{{__('ui.cardhome')}}</h2>
                             <div class="my-4">
