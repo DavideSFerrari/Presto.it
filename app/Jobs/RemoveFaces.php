@@ -13,12 +13,13 @@ class RemoveFaces implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    private $announcement_image_id;
     /**
      * Create a new job instance.
      */
-    public function __construct()
+    public function __construct($announcement_image_id)
     {
-        //
+        $this->announcement_image_id = $announcement_image_id ;
     }
 
     /**
@@ -26,6 +27,6 @@ class RemoveFaces implements ShouldQueue
      */
     public function handle(): void
     {
-        //
+        
     }
 }
