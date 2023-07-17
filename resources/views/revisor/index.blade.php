@@ -10,19 +10,41 @@
         </div>
     </div>
     
-                            
-    @if ($announcement_to_check)
-        <div class="container">
+    <div class="container bg-white">                  
+        @if ($announcement_to_check)
+            <div class="container carouselrevisor-container">
+                <div id="carouselExampleIndicators" class="carousel slide">
 
-                    <div id="carouselExampleIndicators" class="carousel slide">
                     @if ($announcement_to_check->images->isNotEmpty())
                         <div class="carousel-inner">
                             @foreach ($announcement_to_check->images as $image)
                             <div class="carousel-item @if($loop->first)active @endif">
-                                <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="" style="display: block; margin: auto;">
+                                <img src="{{$image->getUrl(300,400)}}" class="img-fluid p-3 rounded" alt="" style="display: block; margin: auto;">
                             </div>
                             @endforeach
                         </div>
+                        <div class="col-md-3 borded-end text-center m-auto">
+                            <h5 class="tc-accent mt-3">Tags</h5>
+                            <div class="p-2">
+                                @if ($image->labels)
+                                    @foreach ($image->labels as $label)
+                                        <p class="d-inline">{{$label}},</p>
+                                    @endforeach
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="card-boby text-center">
+                            <h5 class="tc-accent">Revisione Immagini</h5>
+                                <div class="d-flex justify-content-evenly">
+                                    <p style="display: inline;">Adulti: <span class="{{$image->adult}}"></span></p>
+                                    <p style="display: inline;">Satira: <span class="{{$image->spoof}}"></span></p>
+                                    <p style="display: inline;">Medicina: <span class="{{$image->medical}}"></span></p>
+                                    <p style="display: inline;">Violenza: <span class="{{$image->violence}}"></span></p>
+                                    <p style="display: inline;">Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                                </div>
+                            </div>
+
                     @else
                         <div class="carousel-inner">
 
@@ -39,7 +61,7 @@
                         </div>
                     @endif
 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        <button class="carousel-control-prev carousel-prev-indicator bg-black" type="button" data-bs-target="#carouselExampleIndicators"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
@@ -49,18 +71,17 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button> 
+                        
+                </div>
+                
+            </div>
 
-                        </div>
+            <hr>
 
-        </div>
-
-
-
-
-                <div class="revisor-container">
-                    <h1>{{ $announcement_to_check->title }}</h1>
-                    <p>{{ $announcement_to_check->description }}</p>
-                    <p class="text-uppercase">{{ $announcement_to_check->category->name }}</p>
+                <div class="container revisor-container">
+                    <h1 class="text-center">{{ $announcement_to_check->title }}</h1>
+                    <p class="text-center">{{ $announcement_to_check->description }}</p>
+                    <p class="text-uppercase text-center">{{ $announcement_to_check->category->name }}</p>
                     <p class="card-footer">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}
                     <div>
                         <div class="d-flex ">
@@ -82,9 +103,8 @@
                     </div>
                 </div> 
 
-            
-
-    @endif
+        @endif
+    </div>
 
     @if (Auth::user()->last_announcement_revised)
     <div class="d-flex justify-content-center m-5 pt-5">

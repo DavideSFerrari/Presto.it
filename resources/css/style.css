@@ -22,6 +22,21 @@
 .btn-2 {
     border-width: 1px solid red;
 }
+
+.carouselrevisor-container {
+    border-bottom: 0px;
+    background-color: rgba(100%, 100%, 100%, 1.0);
+    width: auto;
+}
+
+.carousel-control-prev {
+    border-radius: 30px;
+    height: 10%;
+    width: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .div-custom{
     background:white;
     border-radius: 15px;
@@ -288,6 +303,10 @@ a{
 .revisor-container {
     background-color: rgba(100%, 100%, 100%, 1.0);
     padding: 10px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
 }
 
 .card-title {
@@ -343,3 +362,6 @@ a{
  .h-revisor{
     color: white;
  }
+
+
+ 
