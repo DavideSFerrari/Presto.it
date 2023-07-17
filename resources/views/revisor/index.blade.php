@@ -10,7 +10,7 @@
         </div>
     </div>
     
-    <div class="container ">                  
+    <div class="container bg-white">                  
         @if ($announcement_to_check)
             <div class="container carouselrevisor-container">
                 <div id="carouselExampleIndicators" class="carousel slide">
@@ -33,16 +33,16 @@
                                 @endif
                             </div>
                         </div>
-                    <div class="col-md-3">
-                        <div class="card-boby">
+
+                        <div class="card-boby text-center">
                             <h5 class="tc-accent">Revisione Immagini</h5>
-                                <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                                <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                                <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                                <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                                <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
-                        </div>
-                    </div>
+                                <p style="display: inline;">Adulti: <span class="{{$image->adult}}"></span></p>
+                                <p style="display: inline;">Satira: <span class="{{$image->spoof}}"></span></p>
+                                <p style="display: inline;">Medicina: <span class="{{$image->medical}}"></span></p>
+                                <p style="display: inline;">Violenza: <span class="{{$image->violence}}"></span></p>
+                                <p style="display: inline;">Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                            </div>
+
                     @else
                         <div class="carousel-inner">
 
@@ -59,7 +59,7 @@
                         </div>
                     @endif
 
-                        <button class="carousel-control-prev bg-black" type="button" data-bs-target="#carouselExampleIndicators"
+                        <button class="carousel-control-prev carousel-prev-indicator bg-black" type="button" data-bs-target="#carouselExampleIndicators"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
