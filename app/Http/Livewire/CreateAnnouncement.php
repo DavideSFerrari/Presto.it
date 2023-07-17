@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\GoogleVisionSafeSearch;
 use App\Jobs\ResizeImage;
 use Livewire\Component;
 use App\Models\Announcement;
@@ -77,7 +78,7 @@ public function removeImage($key)
             $newFileName = "announcements/{$this->announcement->id}";
             $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
             dispatch(new ResizeImage($newImage->path , 300 , 400));
-            
+            dispatch(new GoogleVisionSafeSearch($newImage->id));
         }
 
         File::deleteDirectory(storage_path('/app/livewire-tmp'));
