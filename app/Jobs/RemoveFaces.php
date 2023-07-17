@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Jobs;
-use Spatie\Image\Image as SpatieImage;
+
+use App\Models\Image;
 use Illuminate\Bus\Queueable;
+use Spatie\Image\Manipulations;
 use Illuminate\Queue\SerializesModels;
+use Spatie\Image\Image as SpatieImage;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -37,11 +40,11 @@ class RemoveFaces implements ShouldQueue
         $response = $imageAnnotator->faceDetection($image);
         $faces = $response->getFaceAnnotations();
 
-        @foreach ($faces as $face) {
+        foreach ($faces as $face) {
             $vertices = $face->getBoundingPoly()->getVertices();
 
             $bounds = [];
-            @foreach ($vertices as vertex) {
+            foreach ($vertices as $vertex) {
                 $bounds[] = [$vertex->getX(), $vertex->getY()];
             }
 
@@ -59,7 +62,7 @@ class RemoveFaces implements ShouldQueue
 
                 $image->save($srcPath);
         }
-
+        
         $imageAnnotator->close();
     } 
 }
