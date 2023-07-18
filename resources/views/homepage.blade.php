@@ -4,7 +4,7 @@
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active ">
-                <img src="{{ url('/img/prova1.jpg') }}" class="d-block  img w-100" alt="...">
+                <img src="{{ url('/img/prova1.jpg') }}" class="d-block  img w-100 rounded-4" alt="...">
                 <div class="container">
                 <div class="row"> 
                 <div class="carousel-caption d-none d-md-block  top-15 ">
@@ -35,29 +35,29 @@
   </div>
 
     <h3 class="text-center my-5 fs-1">Top Categorie</h3>
-    <div class="m-custom-4 my-5">
-        <div class="row">
-            <div class="col-2" style="">
+    <div class="m-custom-4 my-5 mx-5 px-5">
+        <div class="row justify-content-md-evenly">
+            <div class="col-md-2 my-1">
                 <a href="{{route('categories.detail', '1')}}">
                     <img src="{{ url('/img/motori.png') }}" class="img-fluid rounded-4 shadow card-custom" alt="Motori">
                 </a>
             </div>
-            <div class="col-2">
+            <div class="col-md-2 my-1">
                 <a href="{{route('categories.detail', '2')}}">
                     <img src="{{ url('/img/informatica.png') }}" class="img-fluid rounded-4 shadow card-custom" alt="Informatica">
                 </a>
             </div>
-            <div class="col-2">
+            <div class="col-md-2 my-1">
                 <a href="{{route('categories.detail', '5')}}">
                     <img src="{{ url('/img/giochi.png') }}" class="img-fluid rounded-4 shadow card-custom" alt="Giochi">
                 </a>
             </div>
-            <div class="col-2">
+            <div class="col-md-2 my-1">
                 <a href="{{route('categories.detail', '7')}}">
                     <img src="{{ url('/img/immobili.png') }}" class="img-fluid rounded-4 shadow card-custom" alt="Immobili">
                 </a>
             </div>
-            <div class="col-2">
+            <div class="col-md-2 my-1">
                 <a href="{{route('categories.detail', '6')}}">
                     <img src="{{ url('/img/sport.png') }}" class="img-fluid rounded-4 shadow card-custom" alt="Sport">
                 </a>
