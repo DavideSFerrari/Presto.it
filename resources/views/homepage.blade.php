@@ -36,8 +36,8 @@
 
     <h3 class="text-center my-5 fs-1">Top Categorie</h3>
     <div class="m-custom-4 my-5">
-        <div class="row" style="">
-            <div class="col-2">
+        <div class="row">
+            <div class="col-2" style="">
                 <a href="{{route('categories.detail', '1')}}">
                     <img src="{{ url('/img/motori.png') }}" class="img-fluid rounded-4 shadow card-custom" alt="Motori">
                 </a>

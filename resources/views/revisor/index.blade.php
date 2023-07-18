@@ -38,12 +38,12 @@
 
                             <div class="card-boby text-center">
                                 <h5 class="tc-accent">Revisione Immagini</h5>
-                                    <div class="d-flex justify-content-evenly">
-                                        <p style="display: inline;">Adulti: <span class="{{$image->adult}}"></span></p>
-                                        <p style="display: inline;">Satira: <span class="{{$image->spoof}}"></span></p>
-                                        <p style="display: inline;">Medicina: <span class="{{$image->medical}}"></span></p>
-                                        <p style="display: inline;">Violenza: <span class="{{$image->violence}}"></span></p>
-                                        <p style="display: inline;">Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                                    <div class="d-sm-flex justify-content-sm-evenly">
+                                        <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                                        <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                                        <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                                        <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                                        <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
                                     </div>
                             </div>
                         </div>
