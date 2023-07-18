@@ -4,7 +4,7 @@
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active ">
-                <img src="{{ url('/img/prova1.jpg') }}" class="d-block  img w-100" alt="...">
+                <img src="{{ url('/img/prova1.jpg') }}" class="d-block  img w-100 rounded-4" alt="...">
                 <div class="container">
                 <div class="row"> 
                 <div class="carousel-caption d-none d-md-block  top-15 ">
