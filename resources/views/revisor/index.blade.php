@@ -23,28 +23,30 @@
                             </div>
                             @endforeach
                         </div>
-                        <div class="col-md-3 borded-end text-center m-auto">
-                            <h5 class="tc-accent mt-3">Tags</h5>
-                            <div class="p-2">
-                                @if ($image->labels)
-                                    @foreach ($image->labels as $label)
-                                        <p class="d-inline">{{$label}},</p>
-                                    @endforeach
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="card-boby text-center">
-                            <h5 class="tc-accent">Revisione Immagini</h5>
-                                <div class="d-flex justify-content-evenly">
-                                    <p style="display: inline;">Adulti: <span class="{{$image->adult}}"></span></p>
-                                    <p style="display: inline;">Satira: <span class="{{$image->spoof}}"></span></p>
-                                    <p style="display: inline;">Medicina: <span class="{{$image->medical}}"></span></p>
-                                    <p style="display: inline;">Violenza: <span class="{{$image->violence}}"></span></p>
-                                    <p style="display: inline;">Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                        <p class="card-footer text-center">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}
+                        <div class="revisortags-container">
+                            <div class="col-md-3 borded-end text-center m-auto">
+                                <h5 class="tc-accent mt-3">Tags</h5>
+                                <div class="p-2">
+                                    @if ($image->labels)
+                                        @foreach ($image->labels as $label)
+                                            <p class="d-inline">{{$label}},</p>
+                                        @endforeach
+                                    @endif
                                 </div>
                             </div>
 
+                            <div class="card-boby text-center">
+                                <h5 class="tc-accent">Revisione Immagini</h5>
+                                    <div class="d-flex justify-content-evenly">
+                                        <p style="display: inline;">Adulti: <span class="{{$image->adult}}"></span></p>
+                                        <p style="display: inline;">Satira: <span class="{{$image->spoof}}"></span></p>
+                                        <p style="display: inline;">Medicina: <span class="{{$image->medical}}"></span></p>
+                                        <p style="display: inline;">Violenza: <span class="{{$image->violence}}"></span></p>
+                                        <p style="display: inline;">Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                                    </div>
+                            </div>
+                        </div>
                     @else
                         <div class="carousel-inner">
 
@@ -66,7 +68,7 @@
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        <button class="carousel-control-next carousel-next-indicator bg-black" type="button" data-bs-target="#carouselExampleIndicators"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
@@ -82,20 +84,20 @@
                     <h1 class="text-center">{{ $announcement_to_check->title }}</h1>
                     <p class="text-center">{{ $announcement_to_check->description }}</p>
                     <p class="text-uppercase text-center">{{ $announcement_to_check->category->name }}</p>
-                    <p class="card-footer">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}
                     <div>
-                        <div class="d-flex ">
+                        <hr>
+                        <div class="d-flex justify-content-center">
                             <form action="{{ route('revisor.accepted_announcement', ['announcement' => $announcement_to_check]) }}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-success shadow">{{__('ui.accetta')}}</button>
+                                <button type="submit" class="btn btn-success shadow m-1">{{__('ui.accetta')}}</button>
                             </form>
-        
+                            
                                 <!-- <div class="col-6 col-md-3 text end"> -->
                             <form action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-danger shadow">{{__('ui.rifiuta')}}</button>
+                                <button type="submit" class="btn btn-danger shadow m-1">{{__('ui.rifiuta')}}</button>
                             </form>
                                                                
                                 <!-- </div> -->
