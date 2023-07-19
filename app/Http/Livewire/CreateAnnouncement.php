@@ -76,7 +76,7 @@ public function removeImage($key)
 
     if (count($this->images)){
         foreach ($this->images as $image){
-            //$this->announcement->images()->create(['path'=>$image->store('images','public')]);
+            
             $newFileName = "announcements/{$this->announcement->id}";
             $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
             

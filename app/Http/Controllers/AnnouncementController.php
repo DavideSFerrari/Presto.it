@@ -29,9 +29,11 @@ class AnnouncementController extends Controller
 
     public function edit(Announcement $announcements)
     {
-        return view('announcements.edit', compact('announcements'));
+        return view('announcements.edit', compact('announcement'));
     }
 
+    
+    
     public function destroy(Announcement $announcement)
     {
        
