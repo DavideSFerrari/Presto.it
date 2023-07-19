@@ -35,13 +35,7 @@ Route::get('/announcement/homepage', [AnnouncementController::class,'index'])->n
 Route::get('/create/announcement',[AnnouncementController::class,'createAnnouncement'])->name('announcements.create');
 Route::get('/detail/announcement/{announcement}', [AnnouncementController::class, 'detailAnnouncement'])->name('announcements.detail');
 Route::get('/category/{category}', [CategoryController::class, 'categoryShow'] )->name('categories.detail');
-<<<<<<< HEAD
 Route::delete('/announcement/{announcement}', [AnnouncementController::class, 'destroy'])->name('announcements.delete');
-=======
-Route::get('announcement/{announcement}/edit', [AnnouncementController::class, 'edit'])->name('announcements.edit');
-
-Route::delete('/announcement/{announcement}', [AnnouncementController::class,'destroy'])->name('user_profile.index');
->>>>>>> c6aa0ef54006b46be270753e58e90ac3048156ad
 
 
 // --- REVISORE
