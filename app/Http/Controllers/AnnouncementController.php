@@ -31,6 +31,7 @@ class AnnouncementController extends Controller
     {
        
         $announcement->delete();
+        
         return redirect()
             ->route('user_profile.index')
             ->with('success', 'Cancellazione avvenuta con successo!');
