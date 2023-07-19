@@ -18,7 +18,7 @@
 
                 <div class="me-lg-5 text-center"> 
                     <div class="row mx-lg-0">
-                        <div class="input-group bg-danger">
+                        <div class="input-group">
                             <div class="input-group-btn search-panel mx-auto">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 
