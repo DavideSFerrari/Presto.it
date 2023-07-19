@@ -360,10 +360,20 @@ a{
         margin-left: 8px;
   } 
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1200px) {
     .sezioneUtente {
         border-left: none;
-        margin-left: 0px;
+        border-top: 1px solid black;
+        margin-left: 5px;
+        margin-right: 5px;
+  }  
+ }
+
+ @media only screen and (max-width: 1200px) {
+    .sezioneUtenteLogout {
+        border-bottom: 1px solid black;
+        margin-left: 5px;
+        margin-right: 5px;
   }  
  }
 

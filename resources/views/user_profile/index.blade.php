@@ -38,9 +38,8 @@
                                 <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                                 <div class="mt-3">
                                   <h4>{{ Auth::user()->name }}</h4>
-                                  <p class="text-secondary mb-1">Full Stack Developer</p>
-                                  <p class="text-muted font-size-sm">Nel paese delle meraviglie</p>
-                                  <a class="btn anim2">Cambia Immagine</a>
+                                  <p class="text-secondary mb-1"> Descrizione {{ Auth::user()->description}}
+                                  
                                 </div>
                               </div>
                             </div>
@@ -70,6 +69,7 @@
                               <div class="row">
                                 <div class="col-sm-3">
                                   <h6 class="mb-0">Mobile/Phone</h6>
+                                  {{ Auth::user()->phone }}
                                 </div>
                                 <div class="col-sm-9 text-secondary">
         
@@ -79,6 +79,7 @@
                               <div class="row">
                                 <div class="col-sm-3">
                                   <h6 class="mb-0">Address</h6>
+                                  {{ Auth::user()->address}}
                                 </div>
                                 <div class="col-sm-9 text-secondary">
         
@@ -88,6 +89,7 @@
                               <div class="row">
                                 <div class="col-sm-3">
                                   <h6 class="mb-0">Site</h6>
+                                  {{ Auth::user()->site }}
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     
