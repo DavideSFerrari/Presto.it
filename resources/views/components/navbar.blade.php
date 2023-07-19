@@ -4,9 +4,9 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-lg-around ps-1 pe-1 text-center" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse justify-content-lg-around ps-1 pe-1 text-center mx-sm-5 mx-lg-0 mt-2 mt-lg-0" id="navbarSupportedContent">
 
-        <div class="">
+        <div class="ms-3">
             <a class="navbar-brand anim" href="{{ route('homepage') }}">Presto.it</a>
         </div>
 
@@ -16,10 +16,10 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 
-                <div class="m-custom-3"> 
-                    <div class="row mx-ms-auto mx-lg-0">
-                        <div class="input-group">
-                            <div class="input-group-btn search-panel">
+                <div class="me-lg-5 text-center"> 
+                    <div class="row mx-lg-0">
+                        <div class="input-group bg-danger">
+                            <div class="input-group-btn search-panel mx-auto">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 
                                     <li class="nav-item dropdown">
@@ -37,12 +37,10 @@
                                     </li>
                             </div>
 
-                        <form action="{{route('announcements.search')}}" method="GET" role="search">
-                            
-                        </form>
+
 
                             
-                                <form action="{{route('announcements.search')}}" method="GET" role="search" class="">   
+                                <form action="{{route('announcements.search')}}" method="GET" role="search" class="mx-auto">   
                                     <input type="search" class="form-control rounded-5" name="searched" placeholder="Ricerca ..." style="display: inline !important; width: 80% !important;">   
                                     <span class="input-group-btn">  
                                     <button class="btn btn-default" type="submit">
