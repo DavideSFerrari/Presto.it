@@ -13,6 +13,7 @@
             transition: border 0.2s linear 0s;
         }
 </style>
+
     <section>
         <div class="container py-5">
             <div class="row">
@@ -58,25 +59,51 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
-                    <div class="row">
-                        @forelse ($announcements as $announcement)
-                        <x-card :$announcements>
-
-                        </x-card>
-                        @empty
-                    </div>
-                    <div class="row py-3">
-                        <div>
-                            Nessun annuncio, sorry. :(
-                        </div>
-                    </div>
-                    @endforelse
+                    
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Titolo</th>
+                                <th scope="col">Descrizione</th>
+                                <th scope="col">Prezzo</th>
+                                <th scope="col">Dettaglio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                        
+                        
+                        <tbody>
+                            @foreach ($announcements as $announcement)
+                                <tr>
+                                    <th scope="row">{{ $announcement['id'] }}</th>
+                                    <td>{{ $announcement['title'] }}</td>
+                                    <td>{{ $announcement['description'] }}</td>
+                                    <td>{{ $announcement['price'] }}</td>
+                                    <td>{{ $announcement['detail'] }}</td>
+                                    <td>
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            
+                                            <a href="{{ route('announcements.create', ['announcement' => $announcement['id']]) }}"
+                                                class="btn btn-warning me-md-2">Modifica</a>
+                                                <a href="{{ route('user_profile.index', ['announcement' => $announcement['id']]) }}"
+                                                    class="btn btn-danger me-md-2">Cancella</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
+        
+                        </tbody>
+                    </table>
+                       
                 </div>
             </div>
         </div>
         </div>
-        {{-- {{$advs->link()}} --}}
+        
     </section>
     
 </x-main>
