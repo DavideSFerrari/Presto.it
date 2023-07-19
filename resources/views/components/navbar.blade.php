@@ -16,7 +16,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 
-                <div class="me-lg-5 text-center"> 
+                <div class="me-lg-5 text-center d-flex align-content-center"> 
                     <div class="row mx-lg-0">
                         <div class="input-group">
                             <div class="input-group-btn search-panel mx-auto">
@@ -59,7 +59,7 @@
 
                 @if (Route::has('login'))
                     @auth
-                        <div class="sezioneUtente">
+                        <div class="sezioneUtente mt-3 mt-lg-0">
                             <a class="nav-link anim mx-2" href="{{ route('user_profile.index')}}" class="my-2">{{__('ui.saluto')}} {{ Auth::user()->name }}, {{__('ui.cosafai')}}</a>
                         </div>
                         <li class="nav-item">
@@ -82,7 +82,7 @@
                             </li>
                         @endif
 
-                        <form action="{{ route('logout') }}" method="POST">
+                        <form action="{{ route('logout') }}" method="POST" class="sezioneUtenteLogout mb-3 mb-lg-0">
                             @csrf
                             <button class="btn-1" onclick="event.preventDefault(); this.closest('form').submit();">
                                 <li class="nav-item">
@@ -111,15 +111,15 @@
 
                         
 
-                        <li class="nav-item">
-            <x-_locale lang='it' nation='it'/>
-        </li>
-        <li class="nav-item">
-            <x-_locale lang='en' nation='gb'/>
-        </li>
-        <li class="nav-item">
-            <x-_locale lang='es' nation='es'/>
-        </li>
+                <li class="nav-item mx-auto">
+                    <x-_locale lang='it' nation='it'/>
+                </li>
+                <li class="nav-item mx-auto">
+                    <x-_locale lang='en' nation='gb'/>
+                </li>
+                <li class="nav-item mx-auto">
+                    <x-_locale lang='es' nation='es'/>
+                </li>
         
             </ul>
         </div>
