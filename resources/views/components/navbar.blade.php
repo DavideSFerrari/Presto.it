@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-around ps-1 pe-1" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse justify-content-lg-around ps-1 pe-1 text-center" id="navbarSupportedContent">
 
         <div class="">
             <a class="navbar-brand anim" href="{{ route('homepage') }}">Presto.it</a>
@@ -17,7 +17,7 @@
 
 
                 <div class="m-custom-3"> 
-                    <div class="row">
+                    <div class="row mx-ms-auto mx-lg-0">
                         <div class="input-group">
                             <div class="input-group-btn search-panel">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -62,7 +62,7 @@
                 @if (Route::has('login'))
                     @auth
                         <div class="sezioneUtente">
-                            <a class="nav-link anim mx-2" href="#" class="my-2">{{__('ui.saluto')}} {{ Auth::user()->name }}, {{__('ui.cosafai')}}</a>
+                            <a class="nav-link anim mx-2" href="{{ route('user_profile.index')}}" class="my-2">{{__('ui.saluto')}} {{ Auth::user()->name }}, {{__('ui.cosafai')}}</a>
                         </div>
                         <li class="nav-item">
                             @if (Route::has('login'))

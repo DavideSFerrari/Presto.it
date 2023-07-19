@@ -32,7 +32,7 @@ class RemoveFaces implements ShouldQueue
             return;
         }
 
-        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
+        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('2023-05-11-hkpt-presto-user-story-7.json'));
         
         $srcPath = storage_path('app/public/' . $i->path);
         $image = file_get_contents($srcPath);
@@ -55,7 +55,11 @@ class RemoveFaces implements ShouldQueue
             $h = $bounds[2][1] - $bounds[0][1];
 
             $image = SpatieImage::load($srcPath);
-           
+            
+          /*  $image->watermark(base_path('resources/img/watermark.png'))
+            ->watermarkPosition(Manipulations::POSITION_CENTER);*/
+
+            $image->save($srcPath);
 
             $image->watermark(base_path('resources/img/smile.png'))
                 ->watermarkPosition('top-left')

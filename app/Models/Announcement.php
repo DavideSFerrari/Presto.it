@@ -34,7 +34,10 @@ public function category(){
     return $this->belongsTo(Category::class);
 }
 
-
+public function getCategory()
+{
+    return Category::find($this->category_id)->slug;
+}
 
 public function user(){
 
