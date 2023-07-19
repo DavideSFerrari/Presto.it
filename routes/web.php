@@ -35,6 +35,7 @@ Route::get('/announcement/homepage', [AnnouncementController::class,'index'])->n
 Route::get('/create/announcement',[AnnouncementController::class,'createAnnouncement'])->name('announcements.create');
 Route::get('/detail/announcement/{announcement}', [AnnouncementController::class, 'detailAnnouncement'])->name('announcements.detail');
 Route::get('/category/{category}', [CategoryController::class, 'categoryShow'] )->name('categories.detail');
+Route::get('announcement/{announcement}/edit', [AnnouncementsController::class, 'edit'])->name('announcements.edit');
 
 
 
