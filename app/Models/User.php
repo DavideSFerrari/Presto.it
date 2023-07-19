@@ -24,7 +24,11 @@ class User extends Authenticatable
         'provider',
         'provider_id',
         'announcement_id',
-        'last_announcement_revised'
+        'last_announcement_revised',
+        'phone',
+        'address',
+        'site',
+        'path'
     ];
 
     
