@@ -359,6 +359,14 @@ a{
         border-left: 1px solid black;
         margin-left: 8px;
   } 
+
+  @media only screen and (max-width: 992px) {
+    .sezioneUtente {
+        border-left: none;
+        margin-left: 0px;
+  }  
+ }
+
   .img-preview {
 
     width: 500px;

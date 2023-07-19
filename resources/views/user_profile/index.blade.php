@@ -134,8 +134,12 @@
                                             
                                             <a href="{{ route('announcements.create', ['announcement' => $announcement['id']]) }}"
                                                 class="btn btn-warning me-md-2">Modifica</a>
-                                                <a href="{{ route('user_profile.index', ['announcement' => $announcement['id']]) }}"
-                                                    class="btn btn-danger me-md-2">Cancella</a>
+                                                <form action="{{ route('announcements.delete', ['announcement' => $announcement['id']]) }}" method='POST'>
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger me-md-2">Cancella</button>
+                                                </form>
+                                                
                                         </div>
                                     </td>
                                 </tr>

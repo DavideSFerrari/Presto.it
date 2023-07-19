@@ -27,10 +27,16 @@ class AnnouncementController extends Controller
         return view('announcements.detail', compact('announcement'));
     }
 
+    public function edit(Announcement $announcements)
+    {
+        return view('announcements.edit', compact('announcements'));
+    }
+
     public function destroy(Announcement $announcement)
     {
        
         $announcement->delete();
+        
         return redirect()
             ->route('user_profile.index')
             ->with('success', 'Cancellazione avvenuta con successo!');
