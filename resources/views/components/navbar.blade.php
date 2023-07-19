@@ -62,7 +62,7 @@
                 @if (Route::has('login'))
                     @auth
                         <div class="sezioneUtente">
-                            <a class="nav-link anim mx-2" href="#" class="my-2">{{__('ui.saluto')}} {{ Auth::user()->name }}, {{__('ui.cosafai')}}</a>
+                            <a class="nav-link anim mx-2" href="{{ route('user_profile.index')}}" class="my-2">{{__('ui.saluto')}} {{ Auth::user()->name }}, {{__('ui.cosafai')}}</a>
                         </div>
                         <li class="nav-item">
                             @if (Route::has('login'))
