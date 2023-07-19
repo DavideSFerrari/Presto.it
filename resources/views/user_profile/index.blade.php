@@ -27,40 +27,84 @@
                 </div>
             </div>
 
-            <div class="row position-relative">
-                <div class="col-lg-4">
-                    <div class="card mb-4">
-                        <div class="card-body text-center">
-                            
-                            <h5 class="my-3">{{ Auth::user()->name }}</h5>
-                            <h6 class="my-3">{{ Auth::user()->email }}</h5>
-                            
+            <div class="container">
+                <div class="main-body">
+                
+                      <div class="row gutters-sm">
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="d-flex flex-column align-items-center text-center">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                                <div class="mt-3">
+                                  <h4>{{ Auth::user()->name }}</h4>
+                                  <p class="text-secondary mb-1">Full Stack Developer</p>
+                                  <p class="text-muted font-size-sm">Nel paese delle meraviglie</p>
+                                  <a class="btn anim2">Cambia Immagine</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                    </div>
+                        <div class="col-md-8">
+                          <div class="card mb-3">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Name</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{ Auth::user()->name }}
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Email</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{ Auth::user()->email }}
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Mobile/Phone</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+        
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Address</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+        
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Site</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <a class="btn anim2 " target="__blank" href="">Edit</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
-                <div class="col-lg-8 ">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <p class="mb-0">{{ __('Nome') }}</p>
-                                </div>
-                                <div class="col-sm-9">
-                                    <p class="text-muted mb-0">{{ Auth::user()->name }}</p>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <p class="mb-0">Email</p>
-                                </div>
-                                <div class="col-sm-9">
-                                    <p class="text-muted mb-0">{{ Auth::user()->email }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
+            </div>
                     
                     <table class="table">
                         <thead>
@@ -70,6 +114,7 @@
                                 <th scope="col">Descrizione</th>
                                 <th scope="col">Prezzo</th>
                                 <th scope="col">Dettaglio</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -89,8 +134,12 @@
                                             
                                             <a href="{{ route('announcements.create', ['announcement' => $announcement['id']]) }}"
                                                 class="btn btn-warning me-md-2">Modifica</a>
-                                                <a href="{{ route('user_profile.index', ['announcement' => $announcement['id']]) }}"
-                                                    class="btn btn-danger me-md-2">Cancella</a>
+                                                <form action="{{ route('announcements.delete', ['announcement' => $announcement['id']]) }}" method='POST'>
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger me-md-2">Cancella</button>
+                                                </form>
+                                                
                                         </div>
                                     </td>
                                 </tr>
@@ -105,5 +154,8 @@
         </div>
         
     </section>
+
+
+    
     
 </x-main>
