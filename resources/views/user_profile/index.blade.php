@@ -38,9 +38,8 @@
                                 <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                                 <div class="mt-3">
                                   <h4>{{ Auth::user()->name }}</h4>
-                                  <p class="text-secondary mb-1">Full Stack Developer</p>
-                                  <p class="text-muted font-size-sm">Nel paese delle meraviglie</p>
-                                  <input class="form-control" id="image" name="path" type="file">Cambia Immagine</a>
+                                  
+                                  
                                 </div>
                               </div>
                             </div>
