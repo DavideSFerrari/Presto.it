@@ -37,19 +37,20 @@ class UserController extends Controller
                     if ($request->hasFile('image') && $request->file('image')->isValid()) {
                         $path_name = $request->file('image')->getClientOriginalName();
                        
-                        $path_image = $request->file('image')->storeAs('public/images/cover', $path_name);
+                        $path_image = $request->file('image')->storeAs('public/images/profiloUtente', $path_name);
                     }
             
             $user->update([
             
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
-                'pages' => $request->pages,
-                'year' => $request->year,
-                'image' => $path_image,
+                'phone' => $request->input('phone'),
+                'address' => $request->input('address'),
+                'path' => $path_image,
+               // dd($user)
             
             ]);
-            return redirect ()->route('usder_profile.index')->with('success' , 'Modifica avvenuta con successo');
+            return redirect ()->route('user_profile.index')->with('success' , 'Modifica avvenuta con successo');
             
             }
     
