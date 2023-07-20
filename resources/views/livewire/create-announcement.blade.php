@@ -1,5 +1,5 @@
 <div class="p-5 rounded-4 my-5 shadow bg-white">
-   <h1>{{__('ui.create')}}</h1>
+   <h1 class="text-center" style="font-family: 'EB Garamond', serif; font-weight: bold;">{{__('ui.create')}}</h1>
    <br>
    
    @if (session()->has ('message'))
@@ -70,6 +70,6 @@
 </div>    
 @endif    
     <hr class="mt-5">
-    <button type="submit" class="btn btn-primary shadow px-4 py-2" style="display: block; margin: auto; width: 25%;">{{__('ui.crea')}}</button>
+    <button type="submit" class="btn btn-primary shadow px-2 py-2 d-block text-center" style="margin: auto; width: 25%;">{{__('ui.crea')}}</button>
 </form>
 </div>

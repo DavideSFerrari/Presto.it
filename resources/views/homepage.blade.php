@@ -4,7 +4,7 @@
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active ">
-                <img src="{{ url('/img/prova1.jpg') }}" class="d-block  img w-100 rounded-4" alt="...">
+                <img src="{{ url('/img/imgcommerce_2.jpg') }}" class="d-block  img w-100 rounded-4" alt="...">
                 <div class="container">
                 <div class="row"> 
                 <div class="carousel-caption d-none d-md-block  top-15 ">
@@ -34,7 +34,7 @@
     </div>
   </div>
 
-    <h3 class="text-center my-5 fs-1">Top Categorie</h3>
+    <h3 class="text-center my-5 fs-1" style="font-family: 'EB Garamond', serif; font-weight: bold;">TOP CATEGORIE</h3>
     <div class="m-custom-4 my-5 mx-5 px-5">
         <div class="row justify-content-md-evenly">
             <div class="col-md-2 my-1">
@@ -66,7 +66,7 @@
     </div>
 
 
-    <h3 class="text-center my-5 fs-1">{{__('ui.home')}}</h3>
+    <h3 class="text-center my-5 fs-1 text-uppercase" style="font-family: 'EB Garamond', serif; font-weight: bold;">{{__('ui.home')}}</h3>
 
     <div class="container my-5">
         <div class="row">
