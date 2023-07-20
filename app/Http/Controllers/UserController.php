@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserRequest;
 use App\Models\Announcement;
 use App\Models\Category;
 use App\Models\User;
@@ -20,11 +21,37 @@ class UserController extends Controller
             return view('user_profile.index', compact('categories', 'announcements'));
         }
     
-        public function edit(){
+        public function edit(User $user){
+
             $announcements = Announcement::all();
             $categories = Category::all();
-            return view('user_profile.edit', compact('announcements', 'categories', ));
+            
+            return view('user_profile.edit', compact('announcements', 'categories', 'user'));
         }
+
+        public function update(User $user, UserRequest $request) {
+
+
+            $path_image = $user->path;
+                    
+                    if ($request->hasFile('image') && $request->file('image')->isValid()) {
+                        $path_name = $request->file('image')->getClientOriginalName();
+                       
+                        $path_image = $request->file('image')->storeAs('public/images/cover', $path_name);
+                    }
+            
+            $user->update([
+            
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'pages' => $request->pages,
+                'year' => $request->year,
+                'image' => $path_image,
+            
+            ]);
+            return redirect ()->route('usder_profile.index')->with('success' , 'Modifica avvenuta con successo');
+            
+            }
     
         public function destroy(User $user){
             $user = Auth::user();
