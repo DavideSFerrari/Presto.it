@@ -3,12 +3,12 @@
     <div class="">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center my-5 fs-1">{{__('ui.lavora')}}</h1>
+                <h1 class="text-center my-5 fs-1" style="font-family: 'EB Garamond', serif; font-weight: bold;">{{__('ui.lavora')}}</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <p class="text-center my-5 fs-4">{{__('ui.conNoi')}}</p>
+                <p class="text-center my-5 fs-4" style="font-family: 'EB Garamond', serif;">{{__('ui.conNoi')}}</p>
             </div>
         </div>
     </div>
@@ -26,10 +26,12 @@
         <div class="mb-3">
             <label for="email"> Email</label>
             <input type="text" class="form-control">
+        </div>
         <br>
 
-            <a href="{{route('mail.become_revisor')}}" class="btn btn-primary shadow px-4 py-2">{{__('ui.inviaRichiesta')}}</a>
-    
+            <a href="{{route('mail.become_revisor')}}" class="btn btn-primary shadow px-1 py-2 d-block mx-auto mx-lg-0 text-center" style="width: 35%;">{{__('ui.inviaRichiesta')}}</a>
+
+
        </form>
     </div>
 
