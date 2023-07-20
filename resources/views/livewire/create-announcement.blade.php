@@ -1,5 +1,5 @@
 <div class="p-5 rounded-4 my-5 shadow bg-white">
-   <h1 class="text-center">{{__('ui.create')}}</h1>
+   <h1 class="text-center" style="font-family: 'EB Garamond', serif; font-weight: bold;">{{__('ui.create')}}</h1>
    <br>
    
    @if (session()->has ('message'))
