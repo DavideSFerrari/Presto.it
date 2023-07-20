@@ -95,7 +95,7 @@
                               <hr>
                               <div class="row">
                                 <div class="col-sm-12">
-                                  <a class="btn anim2" target="_blank" href="{{route ('user_profile.edit')}}">Modifica</a>
+                                  <a class="btn anim2" target="" href="{{route ('user_profile.edit')}}">Modifica</a>
                                 </div>
                               </div>
                             </div>
