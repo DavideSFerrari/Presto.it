@@ -1,6 +1,6 @@
 <x-main>
 
-  <div class="my-5 margin-left-right">
+  <div class="my-5 margin-left-right" style="font-family: 'EB Garamond', serif;">
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active ">
