@@ -69,36 +69,33 @@
                               <div class="row">
                                 <div class="col-sm-3">
                                   <h6 class="mb-0">Telefono Fisso/Mobile</h6>
-                                  {{ Auth::user()->phone }}
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-        
+                                  {{ Auth::user()->phone }}
                                 </div>
                               </div>
                               <hr>
                               <div class="row">
                                 <div class="col-sm-3">
                                   <h6 class="mb-0">Indirizzo</h6>
-                                  {{ Auth::user()->address}}
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-        
+                                  {{ Auth::user()->address}}
                                 </div>
                               </div>
                               <hr>
                               <div class="row">
                                 <div class="col-sm-3">
                                   <h6 class="mb-0">Città</h6>
-                                  {{ Auth::user()->site }}
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    
+                                  {{ Auth::user()->site }}
                                 </div>
                               </div>
                               <hr>
                               <div class="row">
                                 <div class="col-sm-12">
-                                  <a class="btn anim2" target="_blank" href="{{route ('user_profile.edit')}}">Modifica</a>
+                                  <a class="btn anim2" target="" href="{{route ('user_profile.edit')}}">Modifica</a>
                                 </div>
                               </div>
                             </div>
