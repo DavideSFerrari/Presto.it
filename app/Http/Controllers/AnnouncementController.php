@@ -27,7 +27,7 @@ class AnnouncementController extends Controller
         return view('announcements.detail', compact('announcement'));
     }
 
-    public function edit(Announcement $announcements)
+    public function edit(Announcement $announcement)
     {
         return view('announcements.edit', compact('announcement'));
     }

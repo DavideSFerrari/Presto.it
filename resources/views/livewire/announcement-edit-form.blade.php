@@ -1,6 +1,6 @@
 
 <div class="p-5 rounded-4 my-5 shadow bg-white">
-   <h1>{{__('ui.create')}}</h1>
+   <h1>Modifica il tuo annuncio!</h1>
    <br>
    
    @if (session()->has ('message'))
@@ -71,7 +71,7 @@
 </div>    
 @endif    
     <hr class="mt-5">
-    <button type="submit" class="btn btn-primary shadow px-4 py-2" style="display: block; margin: auto; width: 25%;">{{__('ui.crea')}}</button>
+    <button type="submit" class="btn btn-primary shadow px-4 py-2" style="display: block; margin: auto; width: 25%;">Conferma modifica</button>
 </form>
 </div>
 

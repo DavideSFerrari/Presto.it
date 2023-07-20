@@ -29,7 +29,7 @@ class CreateAnnouncement extends Component
 
     protected $rules =[
         'title'=> 'required|min:3',
-        'description'=>'required|min:20',
+        'description'=>'required|min:10',
         'price'=>'required|numeric',
         'detail'=>'',
         'images.*'=>'image|max:1024',

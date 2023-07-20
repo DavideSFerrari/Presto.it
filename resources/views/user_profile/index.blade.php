@@ -134,9 +134,9 @@
                                     <td>
                                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                             
-                                            <a href="{{ route('announcements.create', ['announcement' => $announcement['id']]) }}"
+                                            <a href="{{route('announcements.edit', ['announcement' => $announcement['id']]) }}"
                                                 class="btn btn-warning me-md-2">Modifica</a>
-                                                <form action="{{ route('announcements.delete', ['announcement' => $announcement['id']]) }}" method='POST'>
+                                                <form action="{{route('announcements.delete', ['announcement' => $announcement['id']]) }}" method='POST'>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-danger me-md-2">Cancella</button>
