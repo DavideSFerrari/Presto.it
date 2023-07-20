@@ -13,7 +13,7 @@
     @csrf
     <div class="mb-3">
         <label for="title"> {{__('ui.titolo')}}</label>
-        <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
+        <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror" >
         @error('title')
             {{$message}}
         @enderror    
@@ -47,14 +47,15 @@
         </select>
     </div>
     <br>
-<div class="mb-3">
+
+    <div class="mb-3">
     <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
     @error('temporary_images.*')
         <p class="text-danger mt-2">{{$message}}</p>
     @enderror  
 </div>
 
-@if (!empty($images))
+@if (!empty($images)) || (!empty($imagesFromDb))
 
 <div class="row">
     <div class="col-12">
@@ -63,7 +64,7 @@
             @foreach ($images as $key => $image)
             <div class="col my-3">
                 <div class="img-preview m-auto p-0 shadow rounded" style="background-image: url({{$image->temporaryUrl()}}); background-position: center; background-size: cover;"></div>
-                <button type="button" class="btn btn-danger shadow d-block text-center mt-4 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.cancella')}}</button>
+                <button type="button" class="btn btn-danger shadow d-block text-center mt-4 mx-auto" wire:click="removeImageFromDb({{$key}})">{{__('ui.cancella')}}</button>
             </div>              
             @endforeach
         </div>

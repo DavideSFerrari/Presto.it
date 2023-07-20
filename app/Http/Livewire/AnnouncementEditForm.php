@@ -42,7 +42,7 @@ class AnnouncementEditForm extends Component
 
     public function __mount(){
         $this->title = $this->announcement->title;
-        $this->description = $this->announcement->decription;
+        $this->description = $this->announcement->description;
         $this->price = $this->announcement->price;
         $this->detail = $this->announcement->detail;
         $this->images = $this->announcement->images;
@@ -75,25 +75,7 @@ class AnnouncementEditForm extends Component
     $this->announcement->save();
     $this->announcement->setAccepted(null);
 
-    $message = '';
-
-    switch (session('locale')) {
-        case 'en':
-            $message = "Announcement successfully modified!";
-            break;
-        case 'fr':
-            $message = "Announce modifié avec succès!";
-            break;
-        case 'es':
-            $message = "Anuncio modificado satifactoriamente!";
-            break;
-
-        default:
-            $message = 'Annuncio modificato con successo!';
-            break;
-    }
-
-    return redirect()->route('user_profile.index')->with('success', $message);
+    return redirect()->route('user_profile.index');
 }
 
     public function updatedTemporaryImages()
@@ -115,7 +97,7 @@ public function updated($propertyName)
 
 
     public function render()
-    {
+    {   
         return view('livewire.announcement-edit-form');
     }
 
