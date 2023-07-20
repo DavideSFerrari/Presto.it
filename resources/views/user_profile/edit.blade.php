@@ -40,7 +40,7 @@
                     </div>
                 </div>
 
-                <form action="{{ route('user_profile.update',['user'=> $user->id]) }}" method="POST" class="was-validated"
+                <form action="{{ route('user_profile.update') }}" method="POST" class="was-validated"
                     enctype="multipart/form-data">
                     @csrf
                     @method('PUT')

@@ -29,8 +29,9 @@ class UserController extends Controller
             return view('user_profile.edit', compact('announcements', 'categories', 'user'));
         }
 
-        public function update(User $user, UserRequest $request) {
+        public function update(UserRequest $request) {
 
+            $user = Auth::user();
 
             $path_image = $user->path;
                     
@@ -40,16 +41,14 @@ class UserController extends Controller
                         $path_image = $request->file('image')->storeAs('public/images/profiloUtente', $path_name);
                     }
             
-            $user->update([
+            $user->name = $request->input('name');     
+            $user->email = $request->input('email');
+            $user->phone = $request->input('phone');
+            $user->address = $request->input('address');
+            $user->path = $request->input('path');
+
+            $user->save();
             
-                'name' => $request->input('name'),
-                'email' => $request->input('email'),
-                'phone' => $request->input('phone'),
-                'address' => $request->input('address'),
-                'path' => $path_image,
-               // dd($user)
-            
-            ]);
             return redirect ()->route('user_profile.index')->with('success' , 'Modifica avvenuta con successo');
             
             }
