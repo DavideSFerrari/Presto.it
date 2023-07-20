@@ -21,7 +21,7 @@
                     <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item"><a href="{{ route('homepage') }}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('user_profile.index') }}">User</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('user_profile.index') }}">Profilo Utente</a></li>
                             <li class="breadcrumb-item active" aria-current="page">{{ __('Modifica profilo') }}</li>
                         </ol>
                     </nav>
@@ -40,36 +40,38 @@
                     </div>
                 </div>
 
-                <form action="{{ route('user-profile-information.update') }}" method="POST" class="was-validated"
+                <form action="{{ route('user_profile.update') }}" method="POST" class="was-validated"
                     enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <fieldset class="rounded  bg-custom">
                         <legend class="m-2 text-center">{{ __('Informazioni Utente') }}</legend>
                         <div class="m-3 d-flex">
-                            <label class="form-label mx-auto" for="name">{{ __('Nome') }}</label>
-                            <input class="form-control w-75" type="text" name="name"
+                            <label class="form-label mx-auto" for="name">Nome</label>
+                            <input class="w-75" type="text" name="name"
                                 value="{{ Auth::user()->name }}" id="name" />
                         </div>
                         
                         <div class="m-3 d-flex">
                             <label class="form-label mx-auto" for="email">{{ __('Indirizzo E-mail') }}</label>
-                            <input class="form-control w-75" type="mail" name="email"
+                            <input class="w-75" type="email" name="email"
                                 value="{{ Auth::user()->email }}" id="email" />
                         </div>
-                        <div class="m-3 d-flex">
-                            <label class="form-label mx-auto" for="city">{{ __("Citta'") }}</label>
-                            <input class="form-control w-75" type="text" name="site"
-                                value="{{ Auth::user()->city }}" id="city" />
-                        </div>
+                      
                         <div class="m-3 d-flex">
                             <label class="form-label mx-auto" for="phone">{{ __('Telefono fisso/mobile') }}</label>
-                            <input class="form-control w-75" type="text" name="phone"
-                                value="{{ Auth::user()->phone }}" id="phone" />
+                            <input class="w-75" type="text" name="phone"
+                                value="{{ Auth::user()->phone}}" id="phone" />
+                        </div>
+                        
+                        <div class="m-3 d-flex">
+                            <label class="form-label mx-auto" for="city">{{ __("Citta'") }}</label>
+                            <input class="w-75" type="text" name="address"
+                                value="{{ Auth::user()->address}}" id="address" />
                         </div>
                         <div class="m-3 d-flex">
                             <label class="form-label mx-auto" for="user_img">Immagine profilo</label>
-                            <input class="form-control w-75" type="file" name="path" value=""
+                            <input class="form-label w-75" type="file" name="path" value=""
                                 id="user_img" />
                         </div>
                         <button type="submit" class="btn btn-form m-3 float-end anim2">{{ __('Modifica profilo') }}</button>
