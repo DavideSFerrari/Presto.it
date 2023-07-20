@@ -2,7 +2,7 @@
 
     <div class="row mx-5">
 
-        <h1 class="text-center my-5">Esplora la categoria {{$category->name}}</h1>
+        <h1 class="text-center my-5 text-uppercase" style="font-family: 'EB Garamond', serif; font-weight: bold;">Esplora la categoria {{$category->name}}</h1>
 
         @foreach ($category->announcements as $announcement)
             <div class="product-card rounded-3 card-custom shadow" style="width: 18rem;">

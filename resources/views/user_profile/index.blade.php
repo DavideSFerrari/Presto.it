@@ -50,7 +50,7 @@
                             <div class="card-body">
                               <div class="row">
                                 <div class="col-sm-3">
-                                  <h6 class="mb-0">Name</h6>
+                                  <h6 class="mb-0">Nome</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ Auth::user()->name }}
@@ -68,7 +68,7 @@
                               <hr>
                               <div class="row">
                                 <div class="col-sm-3">
-                                  <h6 class="mb-0">Mobile/Phone</h6>
+                                  <h6 class="mb-0">Telefono Fisso/Mobile</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                   {{ Auth::user()->phone }}
@@ -77,7 +77,7 @@
                               <hr>
                               <div class="row">
                                 <div class="col-sm-3">
-                                  <h6 class="mb-0">Address</h6>
+                                  <h6 class="mb-0">Indirizzo</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                   {{ Auth::user()->address}}
@@ -86,7 +86,7 @@
                               <hr>
                               <div class="row">
                                 <div class="col-sm-3">
-                                  <h6 class="mb-0">Site</h6>
+                                  <h6 class="mb-0">Città</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                   {{ Auth::user()->site }}
@@ -95,7 +95,7 @@
                               <hr>
                               <div class="row">
                                 <div class="col-sm-12">
-                                  <a class="btn anim2 " target="" href="">Edit</a>
+                                  <a class="btn anim2" target="_blank" href="{{route ('user_profile.edit')}}">Modifica</a>
                                 </div>
                               </div>
                             </div>
