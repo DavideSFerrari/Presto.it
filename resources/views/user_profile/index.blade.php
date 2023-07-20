@@ -69,36 +69,33 @@
                               <div class="row">
                                 <div class="col-sm-3">
                                   <h6 class="mb-0">Mobile/Phone</h6>
-                                  {{ Auth::user()->phone }}
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-        
+                                  {{ Auth::user()->phone }}
                                 </div>
                               </div>
                               <hr>
                               <div class="row">
                                 <div class="col-sm-3">
                                   <h6 class="mb-0">Address</h6>
-                                  {{ Auth::user()->address}}
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-        
+                                  {{ Auth::user()->address}}
                                 </div>
                               </div>
                               <hr>
                               <div class="row">
                                 <div class="col-sm-3">
                                   <h6 class="mb-0">Site</h6>
-                                  {{ Auth::user()->site }}
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    
+                                  {{ Auth::user()->site }}
                                 </div>
                               </div>
                               <hr>
                               <div class="row">
                                 <div class="col-sm-12">
-                                  <a class="btn anim2 " target="__blank" href="">Edit</a>
+                                  <a class="btn anim2 " target="" href="">Edit</a>
                                 </div>
                               </div>
                             </div>
