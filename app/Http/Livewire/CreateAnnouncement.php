@@ -29,7 +29,7 @@ class CreateAnnouncement extends Component
 
     protected $rules =[
         'title'=> 'required|min:3',
-        'description'=>'required|min:20',
+        'description'=>'required|min:10',
         'price'=>'required|numeric',
         'detail'=>'',
         'images.*'=>'image|max:1024',
@@ -76,7 +76,7 @@ public function removeImage($key)
 
     if (count($this->images)){
         foreach ($this->images as $image){
-            //$this->announcement->images()->create(['path'=>$image->store('images','public')]);
+            
             $newFileName = "announcements/{$this->announcement->id}";
             $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
             
