@@ -3,7 +3,7 @@
   <div class="my-5 margin-left-right" style="font-family: 'EB Garamond', serif;">
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-inner">
-            <div class="carousel-item active ">
+            <div class="carousel-item active">
                 <img src="{{ url('/img/imgcommerce_2.jpg') }}" class="d-block  img w-100 rounded-4" alt="...">
                 <div class="container">
                 <div class="row"> 
