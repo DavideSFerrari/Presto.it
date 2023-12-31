@@ -33,7 +33,10 @@
     </div>
     <div class="mb-3">
         <label for="detail"> {{__('ui.dettagli')}} </label>
-        <input wire:model="detail" type="text" class="form-control">
+        <input wire:model="detail" type="text" class="form-control @error('detail') is-invalid @enderror">
+        @error('detail')
+            {{$message}}
+        @enderror
     </div>
 
     <div>

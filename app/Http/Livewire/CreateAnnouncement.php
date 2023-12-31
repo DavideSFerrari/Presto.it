@@ -31,7 +31,7 @@ class CreateAnnouncement extends Component
         'title'=> 'required|min:3',
         'description'=>'required|min:10',
         'price'=>'required|numeric',
-        'detail'=>'',
+        'detail'=>'required|string',
         'images.*'=>'image|max:1024',
         'temporary_images.*'=> 'image|max:1024',
 

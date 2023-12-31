@@ -40,7 +40,7 @@ class AnnouncementRequest extends FormRequest
             'price.numeric' => 'Il prezzo deve essere numerico',
             'description.required' => 'La descrizione deve essere obbligatoria',
             'description.string' => 'La descrizione deve essere di tipo stringa',
-            'detail.required' => 'Il dettaglio deve essere obbligatoria',
+            'detail.required' => 'Il dettaglio deve essere obbligatorio',
             'detail.string' => 'Il dettaglio deve essere di tipo stringa',
             'image.mimes' => 'Inserisci immagine nei formati corretti'
         ];
