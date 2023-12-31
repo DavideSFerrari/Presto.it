@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse justify-content-lg-around ps-1 pe-1 text-center mx-sm-5 mx-lg-0 mt-2 mt-lg-0" id="navbarSupportedContent">
 
         <div class="ms-3">
-            <a class="navbar-brand anim" href="{{ route('homepage') }}" style="font-family: 'EB Garamond', serif; font-weight: bold; font-size: 28px;">PRESTOo.it</a>
+            <a class="navbar-brand anim" href="{{ route('homepage') }}" style="font-family: 'EB Garamond', serif; font-weight: bold; font-size: 28px;">PRESTO.it</a>
         </div>
 
 
